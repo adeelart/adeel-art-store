@@ -1,0 +1,221 @@
+{
+  "version": "2026-10-07T17:06:28.539Z",
+  "publishedAt": "2026-10-07T17:06:28.539Z",
+  "categories": [
+    "Basic Sketches",
+    "Medium Sketches",
+    "High-End / Professional Sketches",
+    "Custom Sketch"
+  ],
+  "settings": {
+    "storeName": "ADEEL ART",
+    "deliveryCharges": 350,
+    "payment": {
+      "jazzCashName": "Adeel Rajpoot",
+      "jazzCashNumber": "03058716194",
+      "nayaPayName": "Adeel Rajpoot",
+      "nayaPayNumber": "03187803469",
+      "codEnabled": true,
+      "onlineEnabled": true
+    },
+    "about": {
+      "heading": "Sketching stories with detail, emotion, and artistry.",
+      "paragraphs": [
+        "Welcome to ADEEL ART, where details, memories, and human expression are transformed into hand-drawn artwork. Every stroke is crafted to capture the essence of the subject and the feeling behind the moment.",
+        "I create sketches for portraits, special gifts, homes, and custom commissions. My process blends realism, light shading, and personal storytelling to produce artwork that feels meaningful and premium."
+      ]
+    },
+    "faq": [
+      {
+        "question": "How can I place an order?",
+        "answer": "Choose a sketch, add it to the cart, and complete checkout with your contact and delivery details."
+      },
+      {
+        "question": "How does Cash on Delivery work?",
+        "answer": "Select Cash on Delivery at checkout. You pay when your order is delivered."
+      },
+      {
+        "question": "How can I pay online?",
+        "answer": "Choose Online Payment during checkout to see JazzCash and NayaPay instructions."
+      },
+      {
+        "question": "How does JazzCash payment work?",
+        "answer": "JazzCash details are shown after selecting online payment. Transfer the total and share the confirmation with the artist."
+      },
+      {
+        "question": "How does NayaPay payment work?",
+        "answer": "After selecting online payment, NayaPay details are displayed in the checkout payment box."
+      },
+      {
+        "question": "How can I order a custom sketch?",
+        "answer": "Contact us on WhatsApp with your reference photos and artwork requirements."
+      },
+      {
+        "question": "How long does delivery take?",
+        "answer": "Standard orders typically take 3-7 business days after confirmation."
+      },
+      {
+        "question": "Can I request a specific sketch?",
+        "answer": "Yes. Request custom work, a personalized portrait, or a specific reference style through the custom sketch contact option."
+      },
+      {
+        "question": "How can I contact the artist?",
+        "answer": "Use the contact section or WhatsApp button for questions, commissions, and order updates."
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "basic-2",
+      "productId": "BSK-102",
+      "name": "Window Light",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "imageUrls": [
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80"
+      ],
+      "originalPrice": 5200,
+      "salePrice": 3900,
+      "description": "Quiet lines and atmospheric depth bring warmth into a small, elegant sketch for interior styling and personal shelves.",
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "25% Off"
+    },
+    {
+      "id": "basic-3",
+      "productId": "BSK-103",
+      "name": "Bloom Study",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "imageUrls": [
+        "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80"
+      ],
+      "originalPrice": 6100,
+      "salePrice": 4600,
+      "description": "A floral composition with a soft, hand-drawn finish that suits art lovers seeking a calm, uplifting statement piece.",
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "25% Off"
+    },
+    {
+      "id": "medium-1",
+      "productId": "MSK-201",
+      "name": "Portrait in Motion",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "imageUrls": [
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+      ],
+      "originalPrice": 9500,
+      "salePrice": 7200,
+      "description": "Defined facial features and a graceful shading balance produce a richer portrait that feels personal and distinct.",
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": false,
+      "discountLabel": "24% Off"
+    },
+    {
+      "id": "medium-2",
+      "productId": "MSK-202",
+      "name": "Midnight Muse",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "imageUrls": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+      ],
+      "originalPrice": 11000,
+      "salePrice": 8500,
+      "description": "A dramatic yet elegant portrait with softly layered shading, perfect for collectors wanting a more expressive centerpiece.",
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": false,
+      "discountLabel": "23% Off"
+    },
+    {
+      "id": "medium-3",
+      "productId": "MSK-203",
+      "name": "Golden Hour",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "imageUrls": [
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+      ],
+      "originalPrice": 9800,
+      "salePrice": 7300,
+      "description": "Warm tones and confident linework create a stylish character sketch with emotional detail and classic composition.",
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": false,
+      "discountLabel": "25% Off"
+    },
+    {
+      "id": "high-1",
+      "productId": "HSK-301",
+      "name": "The Atelier Portrait",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "imageUrls": [
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
+      ],
+      "originalPrice": 18000,
+      "salePrice": 14600,
+      "description": "A premium detail-rich portrait designed for collectors, homes, and statement decor. Refined texture and detail push the aesthetic further.",
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": false,
+      "discountLabel": "19% Off"
+    },
+    {
+      "id": "high-2",
+      "productId": "HSK-302",
+      "name": "Collector’s Muse",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "imageUrls": [
+        "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80"
+      ],
+      "originalPrice": 22000,
+      "salePrice": 17800,
+      "description": "Designed for a premium art collection, this sketch combines expressive lines, tonal depth, and highly refined portrait finish.",
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": false,
+      "discountLabel": "19% Off"
+    },
+    {
+      "id": "high-3",
+      "productId": "HSK-303",
+      "name": "Architect of Memory",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "imageUrls": [
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80"
+      ],
+      "originalPrice": 19500,
+      "salePrice": 15900,
+      "description": "A high-end crafted portrait that blends expressive handwork and compelling realism for premium display spaces.",
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": false,
+      "discountLabel": "18% Off"
+    }
+  ]
+}
