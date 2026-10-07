@@ -1,0 +1,981 @@
+{
+  "version": "2026-10-07T19:15:42.394Z",
+  "publishedAt": "2026-10-07T19:15:42.394Z",
+  "categories": [
+    "Basic Sketches",
+    "Medium Sketches",
+    "High-End / Professional Sketches",
+    "Custom Sketch"
+  ],
+  "settings": {
+    "storeName": "ADEEL ART",
+    "deliveryCharges": 350,
+    "payment": {
+      "jazzCashName": "Adeel Rajpoot",
+      "jazzCashNumber": "03058716194",
+      "nayaPayName": "Adeel Rajpoot",
+      "nayaPayNumber": "03187803469",
+      "codEnabled": true,
+      "onlineEnabled": true
+    },
+    "about": {
+      "heading": "Sketching stories with detail, emotion, and artistry.",
+      "paragraphs": [
+        "Welcome to ADEEL ART, where details, memories, and human expression are transformed into hand-drawn artwork. Every stroke is crafted to capture the essence of the subject and the feeling behind the moment.",
+        "I create sketches for portraits, special gifts, homes, and custom commissions. My process blends realism, light shading, and personal storytelling to produce artwork that feels meaningful and premium."
+      ]
+    },
+    "faq": [
+      {
+        "question": "How can I place an order?",
+        "answer": "Choose a sketch, add it to the cart, and complete checkout with your contact and delivery details."
+      },
+      {
+        "question": "How does Cash on Delivery work?",
+        "answer": "Select Cash on Delivery at checkout. You pay when your order is delivered."
+      },
+      {
+        "question": "How can I pay online?",
+        "answer": "Choose Online Payment during checkout to see JazzCash and NayaPay instructions."
+      },
+      {
+        "question": "How does JazzCash payment work?",
+        "answer": "JazzCash details are shown after selecting online payment. Transfer the total and share the confirmation with the artist."
+      },
+      {
+        "question": "How does NayaPay payment work?",
+        "answer": "After selecting online payment, NayaPay details are displayed in the checkout payment box."
+      },
+      {
+        "question": "How can I order a custom sketch?",
+        "answer": "Contact us on WhatsApp with your reference photos and artwork requirements."
+      },
+      {
+        "question": "How long does delivery take?",
+        "answer": "Standard orders typically take 3-7 business days after confirmation."
+      },
+      {
+        "question": "Can I request a specific sketch?",
+        "answer": "Yes. Request custom work, a personalized portrait, or a specific reference style through the custom sketch contact option."
+      },
+      {
+        "question": "How can I contact the artist?",
+        "answer": "Use the contact section or WhatsApp button for questions, commissions, and order updates."
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "product-daf3a02c-53b1-4b87-9b0e-2ddf66b20b64",
+      "productId": "ART-513786",
+      "name": "Expressive Eye Sketch",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "Black & White\" is a captivating artwork that speaks volumes without a single word. Skilfully rendered through fine monochrome pencil shading, this piece focuses on the intricate detail of the human eye and a single glistening tear. It is a timeless portrayal of emotion, resilience, and inner strength.\n\nKey Features:\n\nArtwork Style: Fine-line pencil sketching with high-contrast monochrome shading.\n\nTheme: Expressive, emotional, and contemplative fine art.\n\nPaper & Print Quality: Crafted on premium archival-grade paper to ensure longevity and crisp detail.\n\nVersatile Decor: Perfect for living rooms, bedrooms, personal studios, or gallery walls looking for a dramatic focal point.\n\nAvailable Options: Available as original artwork / high-resolution art print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl5qlV.md.jpg",
+        "https://iili.io/nEl5fKQ.md.jpg",
+        "https://iili.io/nEl5nHP.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 45.10372853069665,
+          "y": 34.53649041290786,
+          "zoom": 1
+        },
+        {
+          "x": 48.07209229180938,
+          "y": 48.629044457440536,
+          "zoom": 1
+        },
+        {
+          "x": 47.64373821961035,
+          "y": 34.57666189315734,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 4500,
+      "salePrice": 3000,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "33% Off"
+    },
+    {
+      "id": "product-c6da1359-1f4b-4956-bc9f-9c51c8a619e8",
+      "productId": "ART-944738",
+      "name": "Any Sketch Of Baby,Child or Men",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "\"Pure Innocence\" is a beautifully detailed pencil sketch that highlights the soft features, curious eyes, and delicate expression of a young child. Crafted with fine shading and precision, this artwork captures the timeless beauty of childhood.\n\nKey Features:\n\nArt Style: Soft-contrast monochrome pencil art with high attention to facial details.\n\nTheme: Innocence, warmth, and family affection.\n\nPaper Quality: Drawn/Printed on premium acid-free paper to prevent fading over time.\n\nBest For: Nursery decor, family living spaces, or a thoughtful gift for parents.\n\nFormat Available: Original / High-Resolution Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl02x1.md.jpg",
+        "https://iili.io/nEl03WF.md.jpg",
+        "https://iili.io/nEl0Fig.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 78.27593341482519,
+          "y": 43.79050242918151,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 10000,
+      "salePrice": 4000,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "60% Off"
+    },
+    {
+      "id": "product-3186811f-b1ad-4a17-ab5e-fad7df1636c0",
+      "productId": "ART-093155",
+      "name": "Skull With Bloody Knife",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "description": "Skull & Dagger\" is an intense monochrome artwork that embodies grit, mystery, and raw artistic energy. Masterfully shaded with fine graphite and ink tones, this piece features a detailed human skull pierced by a sharp blade, highlighting intricate line work and deep contrast.\n\nKey Features:\n\nArt Style: High-contrast gothic line art with dark graphite shading.\n\nTheme: Edgy, rebellious, and mysterious dark fine art.\n\nPaper Quality: Crafted on heavy-textured, acid-free paper for long-lasting durability.\n\nBest For: Studio spaces, game rooms, modern living areas, or unique wall art collections.\n\nAvailable Format: Original Artwork / High-Resolution Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElRcZb.md.jpg",
+        "https://iili.io/nElRMFV.md.jpg",
+        "https://iili.io/nElRawu.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 2000,
+      "salePrice": 1000,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "50% Off"
+    },
+    {
+      "id": "product-2ec36d1c-6c3c-4f76-beb4-201329543256",
+      "productId": "ART-182258",
+      "name": "PUBG Warrior – Tactical Game Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "\"PUBG Warrior\" brings the thrilling world of battle royale straight to your walls. Hand-drawn with precision graphite shading, this sketch captures the battle-ready PUBG character complete with signature level 3 gear, helmet, and tactical outfit. It perfectly embodies grit, focus, and victory.\n\nKey Features:\n\nArt Style: Detailed tactical sketch with rich graphite shading and sharp line art.\n\nTheme: Gaming, battle royale, action, and urban culture.\n\nPaper Quality: Crafted on premium heavy-weight paper to prevent fading and keep details sharp.\n\nBest For: Gaming setups, bedrooms, stream rooms, or as a gift for PUBG lovers.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElRW8P.md.jpg",
+        "https://iili.io/nElRh91.md.jpg",
+        "https://iili.io/nElR0nj.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 1800,
+      "salePrice": 800,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "56% Off"
+    },
+    {
+      "id": "product-ad54093d-075c-4c3e-98d1-90fdaeac9ce4",
+      "productId": "ART-265722",
+      "name": "Ultra Goku – Anime Pencil Sketch",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "description": "\"Ultra Goku\" brings the raw power and spirit of the iconic Saiyan warrior to life. Drawn with precise line art and dramatic graphite shading, this sketch highlights Goku’s intense gaze, signature spiky hair, and powerful battle stance. It is a striking tribute to one of anime’s greatest legends.\n\nKey Features:\n\nArt Style: High-detail anime line work with bold graphite contrast.\n\nTheme: Anime, action, strength, and pop culture.\n\nPaper Quality: Drawn/Printed on premium heavy-weight art paper for crisp details and durability.\n\nBest For: Anime collection rooms, gaming setups, bedrooms, or as a gift for Dragon Ball Z fans.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElRvPR.md.jpg",
+        "https://iili.io/nElRjAF.md.jpg",
+        "https://iili.io/nElReoJ.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 2500,
+      "salePrice": 1000,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "60% Off"
+    },
+    {
+      "id": "product-e296e0ab-ccd5-4aad-a3b4-cfe4fdd15bce",
+      "productId": "ART-353450",
+      "name": "King of Curses – Sukuna Anime Sketch",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "description": "\"King of Curses\" captures the dark power and intimidating presence of Ryomen Sukuna from Jujutsu Kaisen. Masterfully drawn with bold graphite lines and deep contrast shading, this sketch highlights his distinct facial markings, sharp eyes, and sinister grin. A powerful piece that commands attention in any room.\n\nKey Features:\n\nArt Style: High-contrast anime line art with dark graphite shading.\n\nTheme: Dark anime, supernatural, villain art, and pop culture.\n\nPaper Quality: Drawn/Printed on premium archival-grade paper to keep the blacks deep and lines sharp.\n\nBest For: Anime collection walls, gaming rooms, studios, or gifts for JJK fans.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElRUcN.md.jpg",
+        "https://iili.io/nElRgSI.md.jpg",
+        "https://iili.io/nElRkMv.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 2500,
+      "salePrice": 1200,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": false,
+      "discountLabel": "52% Off"
+    },
+    {
+      "id": "product-523404c9-af80-45ae-95b4-db478204fffd",
+      "productId": "ART-424377",
+      "name": "Playful Oggy – Cartoon Pencil Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "\"Playful Oggy\" brings the nostalgia of the iconic animated series Oggy and the Cockroaches to life. Drawn with clean lines and smooth graphite shading, this sketch captures Oggy’s adorable features, big blue nose, and relaxed personality. It’s a delightful art piece that adds humor and joy to any wall space.\n\nKey Features:\n\nArt Style: Smooth cartoon line art with subtle graphite shading.\n\nTheme: Nostalgia, humor, animation, and pop culture.\n\nPaper Quality: Crafted on premium heavy-weight art paper for clean contrast and long-lasting durability.\n\nBest For: Kids' bedrooms, playrooms, creative studios, or gifts for cartoon enthusiasts.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElR49t.md.jpg",
+        "https://iili.io/nElRZP4.md.jpg",
+        "https://iili.io/nElRDKl.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 2500,
+      "salePrice": 1000,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "60% Off"
+    },
+    {
+      "id": "product-14f8586c-d156-41dc-b530-77e0f36578d9",
+      "productId": "ART-532061",
+      "name": "Dark Anime Killer Sketch",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "description": "\"Shadow Assassin\" captures the cold, calculating presence of anime’s most iconic killers and anti-heroes. Masterfully rendered with heavy contrast, sharp graphite lines, and dramatic shading, this piece emphasizes a sinister expression and deadly focus. It brings a thrill of mystery and dark elegance to your art collection.\n\nKey Features:\n\nArt Style: High-contrast noir anime style with deep graphite shading.\n\nTheme: Dark anime, psychological thriller, anti-hero, and mystery.\n\nPaper Quality: Drawn/Printed on premium acid-free art paper for long-lasting dark tones and fine line preservation.\n\nBest For: Anime collection walls, gaming setups, dark-themed decor, or creative studios.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElRmSS.md.jpg",
+        "https://iili.io/nEl59R9.md.jpg",
+        "https://iili.io/nElRyH7.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 3000,
+      "salePrice": 1300,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "57% Off"
+    },
+    {
+      "id": "product-a4104838-7955-4561-9295-1882e4b37b6a",
+      "productId": "ART-661803",
+      "name": "Apex Eagle – High-Detail Eagle Portrait",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "\"Apex Eagle\" is a masterpiece of precision graphite art, showcasing the fierce beauty and majestic presence of the king of birds. Every line is meticulously rendered, from the razor-sharp focus in its eye to the layered, ultra-detailed feather patterns. It represents strength, vision, and untamed freedom.\n\nKey Features:\n\nArt Style: Ultra-realistic graphite portrait with fine feather textures and deep contrast.\n\nTheme: Wildlife, nature, majesty, and strength.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free archival paper to maintain sharpness and rich tone.\n\nBest For: Modern living rooms, executive offices, study rooms, or wildlife art collectors.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl52ob.md.jpg",
+        "https://iili.io/nEl5Fix.md.jpg",
+        "https://iili.io/nEl5HNe.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 4000,
+      "salePrice": 2500,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "38% Off"
+    },
+    {
+      "id": "product-3fc7da51-15ce-458e-bcd6-27c98a8ed9b3",
+      "productId": "ART-863611",
+      "name": "Moonlit Swing – Dreamy Midnight Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "\"Moonlit Swing\" invites you into a world of quiet wonder and quiet freedom. Masterfully drawn with soft graphite blending and subtle contrast, this artwork depicts a silhouette of a girl swinging high from a sprawling tree branch against the glowing backdrop of a full moon and starry night sky. It captures a moment of pure bliss and peaceful solitude.\n\nKey Features:\n\nArt Style: Soft-blended pencil art with dramatic moonlight contrast and detailed silhouette work.\n\nTheme: Dreamy, nature, night sky, nostalgic, and peaceful fine art.\n\nPaper Quality: Drawn/Printed on premium acid-free archival paper to keep the soft shading and glowing moonlight contrast pristine.\n\nBest For: Bedrooms, cozy reading nooks, living rooms, or romantic gift spaces.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl55fR.md.jpg",
+        "https://iili.io/nEl5Aiv.md.jpg",
+        "https://iili.io/nEl5xOF.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 1500,
+      "salePrice": 600,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "60% Off"
+    },
+    {
+      "id": "product-f726cc66-505e-494f-85e4-03685a949f17",
+      "productId": "ART-950101",
+      "name": "Shadow Shinobi – Fierce Masked Ninja Sketch",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "description": "\"Shadow Shinobi\" captures the deadly focus and intense aura of a stealthy assassin. Drawn with sharp graphite lines and dark, dramatic shading, this piece focuses on the ninja’s face mask and glowing, angry eyes filled with determination. It brings a dramatic surge of energy, mystery, and martial arts heritage to any room.\n\nKey Features:\n\nArt Style: High-contrast monochrome line art with intense eye detailing and dark shadow blending.\n\nTheme: Ninja, warrior spirit, aggressive anime/manga art, and mystery.\n\nPaper Quality: Crafted on premium heavy-weight art paper to maintain crisp lines and rich dark graphite tones.\n\nBest For: Gaming setups, martial arts studios, boys' rooms, or edgy anime collection walls.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl5cJI.md.jpg",
+        "https://iili.io/nEl5YUN.md.jpg",
+        "https://iili.io/nEl57lp.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 3000,
+      "salePrice": 1400,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "53% Off"
+    },
+    {
+      "id": "product-61240d2c-fa9d-4369-aedc-3a7b39b91c8f",
+      "productId": "ART-041083",
+      "name": "Wild & Gentle – Half Lion Half Cat Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "\"Wild & Gentle\" is a stunning visual exploration of duality. Hand-drawn with ultra-fine graphite shading, this dual portrait seamlessly connects the powerful, mane-framed face of a majestic lion with the sleek, cute features of a house cat. It perfectly illustrates the idea that even the smallest heart carries the spirit of a king.\n\nKey Features:\n\nArt Style: High-detail split-face pencil art with fine fur texture and realistic eye detailing.\n\nTheme: Duality, power vs. elegance, wildlife, and cat lover art.\n\nPaper Quality: Drawn/Printed on premium acid-free archival paper to ensure fine fur details remain sharp and vivid.\n\nBest For: Animal lovers, living rooms, creative workspaces, hallway gallery walls, or unique gifts.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl51bn.md.jpg",
+        "https://iili.io/nEl50OX.md.jpg",
+        "https://iili.io/nEl5Xf4.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 1600,
+      "salePrice": 650,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "59% Off"
+    },
+    {
+      "id": "product-de3f4e9e-65e1-481f-8bee-74e72d157675",
+      "productId": "ART-126104",
+      "name": "Rajpoot Pride – AK-47 Warrior Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "\"Rajpoot Pride\" combines modern tactical art with rich cultural heritage. Masterfully hand-drawn with high-contrast graphite shading, this artwork features a detailed AK-47 rifle paired with bold, elegant \"Rajpoot\" lettering engraved above it. It stands as a striking symbol of courage, honor, and royal legacy.\n\nKey Features:\n\nArt Style: Detailed weapon line art with custom bold typography and dark metallic shading.\n\nTheme: Royalty, heritage, warrior spirit, and tactical culture.\n\nPaper Quality: Crafted on heavy-weight, acid-free archival paper to maintain deep black tones and clean line work.\n\nBest For: Personal lounges, study rooms, entryway displays, or as a proud cultural gift.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl5h0l.md.jpg",
+        "https://iili.io/nEl5jg2.md.jpg",
+        "https://iili.io/nEl5NJS.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 1000,
+      "salePrice": 350,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "65% Off"
+    },
+    {
+      "id": "product-7f2dbbf1-2fc3-4684-96db-7446646f2163",
+      "productId": "ART-272724",
+      "name": "Anonymous Hacker – Guy Fawkes Mask Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "\"Anonymous Hacker\" captures the mysterious digital culture symbol in a stunning monochrome style. Hand-drawn with sharp precision, this sketch focuses on the iconic Guy Fawkes mask, highlighting its sharp moustache, subtle smirk, and intense shadow play. It represents freedom, privacy, and digital rebellion.\n\nKey Features:\n\nArt Style: High-contrast monochrome artwork with deep shadow blending and clean line precision.\n\nTheme: Cybersecurity, tech culture, mystery, and iconic pop art.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free paper to ensure rich blacks and smooth gray tones.\n\nBest For: Tech setups, coding stations, gaming rooms, or modern office spaces.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl5SWb.md.jpg",
+        "https://iili.io/nEl5Usj.md.jpg",
+        "https://iili.io/nEl58zu.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 1000,
+      "salePrice": 250,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "75% Off"
+    },
+    {
+      "id": "product-cbcd3597-4570-49d8-a525-f66b364cc5db",
+      "productId": "ART-371579",
+      "name": "Cobra MP40 – Legendary Coloured Gun Art",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "description": "\"Cobra MP40\" brings one of the most legendary battle royale weapon skins straight off the screen and onto paper. Hand-drawn and richly coloured with intense red and golden accents, this artwork highlights the sharp cobra head silhouette, venomous scales, and sleek futuristic design of the firearm. It embodies dominance, speed, and victory.\n\nKey Features:\n\nArt Style: Dynamic coloured pencil & ink drawing with high-vibrancy shading and fine line details.\n\nTheme: Gaming culture, battle royale, futuristic weaponry, and esports.\n\nPaper Quality: Crafted on premium heavy-weight, fade-resistant art paper to keep the bold red colors bright and punchy.\n\nBest For: Gaming room setups, bedroom walls, streaming studios, or as a gift for hardcore gamers.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl5rqx.md.jpg",
+        "https://iili.io/nEl5s5P.md.jpg",
+        "https://iili.io/nEl5Le1.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 6000,
+      "salePrice": 2500,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "58% Off"
+    },
+    {
+      "id": "product-1ae24a94-461d-4140-a21e-00754c8a6a17",
+      "productId": "ART-447068",
+      "name": "Eternal Love – Couple Heart Silhouette Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "\"Eternal Love\" captures a quiet, intimate moment between two souls. Hand-drawn with soft graphite blending and elegant line work, this artwork depicts a young couple resting their foreheads together, seamlessly framed within a graceful heart shape. It symbolizes emotional warmth, unity, and everlasting romance.\n\nKey Features:\n\nArt Style: Soft-blended pencil art with elegant silhouette work and fine heart line detailing.\n\nTheme: Romance, love, togetherness, and emotional connection.\n\nPaper Quality: Drawn/Printed on premium acid-free archival paper for smooth shading and long-lasting quality.\n\nBest For: Bedrooms, anniversary gifts, Valentine's Day surprises, or cozy living spaces.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl7JdN.md.jpg",
+        "https://iili.io/nEl5tzg.md.jpg",
+        "https://iili.io/nEl5QmF.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 2999,
+      "salePrice": 1750,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "42% Off"
+    },
+    {
+      "id": "product-aed78f18-1cc8-4057-84ef-98fd6fee6f8e",
+      "productId": "ART-566708",
+      "name": "Shadow Blade – Ninja Katana with Elemental Aura Sketch",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "\"Shadow Blade\" brings the lethal elegance of the ninja's weapon to life with dramatic energy. Hand-drawn with sharp graphite precision, this artwork highlights a finely detailed Katana sword enveloped in a glowing, swirling aura of mystical power. The contrast between the cold metallic blade and the fluid energy streams creates a captivating visual motion that leaps off the paper.\n\nKey Features:\n\nArt Style: High-contrast line art with soft-blended graphite aura effects and sharp metallic shading.\n\nTheme: Martial arts, anime energy, ninja culture, and fantasy warrior art.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free archival paper to maintain clear contrast and smooth energy gradients.\n\nBest For: Gaming stations, martial arts studios, bedrooms, or anime/fantasy collection walls.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nEl7d7I.md.jpg",
+        "https://iili.io/nEl5DXa.md.jpg",
+        "https://iili.io/nEl79gp.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 5000,
+      "salePrice": 2350,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": false,
+      "discountLabel": "53% Off"
+    },
+    {
+      "id": "product-c2f01cd4-d914-44b9-b4ea-11070b68196a",
+      "productId": "ART-692685",
+      "name": "Unchained Laughter – Dynamic Anime Portrait",
+      "category": "Medium Sketches",
+      "productType": "Medium",
+      "description": "\"Unchained Laughter\" captures a raw, intense moment of triumphant emotion and energy. Masterfully hand-drawn from an upward camera angle, this sketch highlights the sharp jawline, expressively tilted head, dynamic hair movement, and joyful laugh of the anime character. High-contrast graphite shading gives the portrait a bold, dramatic flair that instantly draws the eye.\n\nKey Features:\n\nArt Style: High-intensity manga line art with dramatic dynamic perspective and soft graphite shading.\n\nTheme: Anime expression, emotion, freedom, and triumph.\n\nPaper Quality: Drawn/Printed on premium heavy-weight, acid-free archival paper to keep lines sharp and dark tones crisp over time.\n\nBest For: Anime collection walls, creative workspaces, gaming rooms, or youth bedrooms.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElRuF2.md.jpg",
+        "https://iili.io/nElRCjs.md.jpg",
+        "https://iili.io/nElRKvt.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 3499,
+      "salePrice": 1448,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "59% Off"
+    },
+    {
+      "id": "product-96ca39d3-5e75-4bc8-98b1-b0de96ee9630",
+      "productId": "ART-817917",
+      "name": "Whispers of the Floating Realm – Ninja & Maiden Sketch",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "\"Whispers of the Floating Realm\" transports you to a world of mystical landscapes and silent strength. This exquisite hand-drawn sketch, masterfully rendered with high-quality graphite, captures a ninja character in a dynamic pose, surveying the horizon from massive stones hovering high above the clouds. Just behind the warrior, a graceful maiden adds a touch of enigma and contrast, her long, colourful robes (subtly hinted in the monochrome style with intricate shading and patterns) flowing elegantly in the wind. This artwork perfectly balances the raw power of the ninja with the serene beauty of the maiden in an otherworldly setting.\n\nKey Features:\n\nArt Style: High-definition fantasy line art and realistic graphite blending.\n\nTheme: Ancient Japanese culture, shinobi, mystery, otherworldly fantasy, and adventure.\n\nPaper Quality: Drawn/Printed on premium heavy-weight, acid-free archival paper to maintain crisp lines and smooth shading tones.\n\nBest For: Anime and gaming rooms, studios, creative workspaces, or as a gift for lovers of fantasy art.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElRFaI.md.jpg",
+        "https://iili.io/nElR33N.md.jpg",
+        "https://iili.io/nElRd4p.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 7000,
+      "salePrice": 3150,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "55% Off"
+    },
+    {
+      "id": "product-0e45d02d-7ab6-46c7-abef-a31954066772",
+      "productId": "ART-924733",
+      "name": "Pure as Rain – Dew Kissed Anime Portrait Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "\"Pure as Rain\" is a masterclass in atmospheric anime portraiture. This hand-drawn graphite artwork captures the delicate features of an innocent young girl with large, expressive eyes looking softly forward. The highlight of this piece is the intricate and realistic rendering of glistening water droplets clinging to her cheeks, forehead, and delicate neck. Every drop is meticulously shaded to suggest translucency and reflection. The composition is clean and focused, emphasizing her innocent gaze and the ephemeral beauty of the water. This sketch radiates calmness, vulnerability, and a refreshing sense of purity.\n\nKey Features:\n\nArt Style: High-detail classic anime line art with realistic, soft graphite blending and precise liquid rendering.\n\nTheme: Innocence, purity, vulnerability, emotional portraiture, and refreshing aesthetics.\n\nPaper Quality: Drawn/Printed on premium, acid-free archival paper to maintain crisp lines and subtle shading tones over time.\n\nBest For: Anime and manga collection walls, bedroom decor, creative studios, or as a thoughtful gift for lovers of artistic, emotional anime.\n\nAvailable Format: Original Graphite Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElRHCv.md.jpg",
+        "https://iili.io/nElAyZJ.md.jpg",
+        "https://iili.io/nElRJGR.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 2999,
+      "salePrice": 1449,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "52% Off"
+    },
+    {
+      "id": "product-c8d6b8a3-0987-47f9-a818-81891a619f2e",
+      "productId": "ART-032405",
+      "name": "Any Sketch Of Baby,Child,Men or Girl",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "\"Soulful Expressions\" celebrates the beauty and depth of individual personality in classic graphite. Whether showcasing the delicate innocent smile of a baby, the playful curious eyes of a child, the graceful features of a young girl, or the strong, detailed character lines of a man, this artwork is masterfully hand-drawn to bring out life-like realism and emotion. Every stroke focuses on rich facial textures, expressive eyes, and natural lighting.\n\nKey Features:\n\nArt Style: Ultra-fine realism with soft graphite tonal blending and crisp line work.\n\nTheme: Human portraits, family, emotional connection, and timeless realism.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free archival paper for long-lasting preservation.\n\nBest For: Living room walls, bedroom decor, personalized anniversary/birthday gifts, or family memorial displays.\n\nAvailable Format: Original Graphite Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElApja.md.jpg",
+        "https://iili.io/nElArhb.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 10000,
+      "salePrice": 4000,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "60% Off"
+    },
+    {
+      "id": "product-9476f85c-7431-4892-b36d-c01ac7e810f8",
+      "productId": "ART-092772",
+      "name": "Any Sketch Of Baby,Child,Men or girl",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "\"Soulful Expressions\" celebrates the beauty and depth of individual personality in classic graphite. Whether showcasing the delicate innocent smile of a baby, the playful curious eyes of a child, the graceful features of a young girl, or the strong, detailed character lines of a man, this artwork is masterfully hand-drawn to bring out life-like realism and emotion. Every stroke focuses on rich facial textures, expressive eyes, and natural lighting.\n\nKey Features:\n\nArt Style: Ultra-fine realism with soft graphite tonal blending and crisp line work.\n\nTheme: Human portraits, family, emotional connection, and timeless realism.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free archival paper for long-lasting preservation.\n\nBest For: Living room walls, bedroom decor, personalized anniversary/birthday gifts, or family memorial displays.\n\nAvailable Format: Original Graphite Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElASpe.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 10000,
+      "salePrice": 4000,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": false,
+      "discountLabel": "60% Off"
+    },
+    {
+      "id": "product-ef1166c8-8ece-4661-b14d-fc0e63df03a6",
+      "productId": "ART-222038",
+      "name": "High Detailed Street Style Spectacles – Anime Geek-Chic Sketch",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "\"Street Style Spectacles\" brings the effortlessly cool \"geek-chic\" aesthetic of modern anime to life on paper. This hand-drawn graphite artwork captures a trendy male anime character from a confident mid-shot angle. He wears stylish, clear-rimmed spectacles that frame his focused expression, and a substantial, layered metal chain hangs visibly around his neck, adding a touch of edgy urban fashion. The sketch is rendered with detailed line work and smooth shading, highlighting the texture of his stylish hair and the metallic reflection of the chain and glasses. It is a fusion of classic anime art with contemporary street culture.\n\nKey Features:\n\nArt Style: High-definition contemporary anime line art with realistic graphite blending and texture effects.\n\nTheme: \"Geek-chic\" anime fashion, street style, modern character art, and trendy aesthetics.\n\nPaper Quality: Drawn/Printed on premium, acid-free archival paper to maintain crisp lines and smooth shading tones over time.\n\nBest For: Anime and manga collection walls, gaming rooms, modern studios, teen bedrooms, or fashion-forward creative spaces.\n\nAvailable Format: Original Graphite Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElAwB4.md.jpg",
+        "https://iili.io/nElAk2S.md.jpg",
+        "https://iili.io/nElAvY7.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 8899,
+      "salePrice": 3000,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "66% Off"
+    },
+    {
+      "id": "product-8a868d41-8a4e-48f2-9e9a-d2d6b651dca1",
+      "productId": "ART-290338",
+      "name": "Lone Wolf – Sigma Male Expression Sketch",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "\"Lone Wolf\" embodies quiet strength, independence, and unwavering focus. Hand-drawn with razor-sharp graphite lines and strong light-and-shadow contrasts, this artwork captures a stylish character with a chiseled jawline, slicked hair, and a signature cool, unbothered smirk. It stands as a symbol of self-reliance, high standards, and walking your own path.\n\nKey Features:\n\nArt Style: High-contrast graphite shading with sharp jawline definition and dramatic lighting.\n\nTheme: Sigma mindset, motivation, confidence, independence, and modern aesthetic culture.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free archival paper to maintain deep black tones and crisp highlights.\n\nBest For: Personal gyms, gaming setups, study desks, modern offices, or motivational wall spaces.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).\n\nTags / Keywords:",
+      "imageUrls": [
+        "https://iili.io/nElAhQf.md.jpg",
+        "https://iili.io/nElAXhG.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 7000,
+      "salePrice": 2650,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "62% Off"
+    },
+    {
+      "id": "product-cb562608-927a-41a4-a3d8-b94fbdceb69a",
+      "productId": "ART-386909",
+      "name": "High End Gojo Saturo,Jujutsu Kaisen",
+      "category": "High-End / Professional Sketches",
+      "productType": "High-End",
+      "description": "Here is the product description for Satoru Gojo (Jujutsu Kaisen) Sketch:\n\nTitle:\nThe Honored One – Satoru Gojo Limitless Sketch\n\nShort Description:\nA high-intensity, handcrafted pencil sketch of Satoru Gojo from Jujutsu Kaisen. Featuring his signature blindfold / electric blue eyes, spiky hair, and an effortless aura of absolute power.\n\nFull Description:\nOverview:\n\"The Honored One\" captures the unmatched confidence and supreme power of Jujutsu Kaisen’s strongest sorcerer, Satoru Gojo. Masterfully hand-drawn with high-contrast graphite shading and sharp line work, this artwork highlights Gojo’s distinctive spiky hair, sharp facial structure, and iconic stance. Whether depicted wearing his sleek dark blindfold or pulling it down to unleash his glowing Six Eyes, this piece radiates energy, dominance, and effortless cool.\n\nKey Features:\n\nArt Style: High-definition manga line art with dramatic graphite contrast and soft shading accents.\n\nTheme: Anime power, sorcery, Jujutsu Kaisen, and iconic pop culture characters.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free archival paper to maintain dark tones and clean lines over time.\n\nBest For: Anime collection walls, gaming desks, streaming setups, or gifts for Jujutsu Kaisen fans.\n\nAvailable Format: Original Graphite Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElAMpn.md.jpg",
+        "https://iili.io/nElAWIs.md.jpg",
+        "https://iili.io/nElAGkX.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 10000,
+      "salePrice": 4250,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "57% Off"
+    },
+    {
+      "id": "product-7680756f-71f6-4ed3-9a99-96a44e38d661",
+      "productId": "ART-516245",
+      "name": "Lethal Charm – Anime Killing Smile Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "\"Lethal Charm\" captures that iconic anime archetype: an anti-hero or villain with an intoxicating, sinister smile that hides unmatched power. Hand-drawn with sharp graphite precision and bold shadow play, this artwork highlights intense, mischievous eyes paired with a sharp, devilish grin. It brings an electric, rebellious energy to any anime wall collection.\n\nKey Features:\n\nArt Style: High-intensity manga line art with sharp jawline accents, expressive eyes, and dark graphite shading.\n\nTheme: Anti-hero, edgy anime aesthetic, villain grin, and raw attitude.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free archival paper to ensure deep blacks and crisp highlights.\n\nBest For: Anime collection walls, gaming rooms, streaming setups, or edgy bedroom decor.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
+      "imageUrls": [
+        "https://iili.io/nElA12I.md.jpg",
+        "https://iili.io/nElAE7t.md.jpg",
+        "https://iili.io/nElAlrN.md.jpg"
+      ],
+      "imageAdjustments": [
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "zoom": 1
+        }
+      ],
+      "originalPrice": 4000,
+      "salePrice": 2348,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "41% Off"
+    }
+  ]
+}
