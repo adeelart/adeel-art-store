@@ -104,12 +104,14 @@
                 <span></span>
               </div>
               <div class="showcase-grid">
-                <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&w=900&q=80" alt="Featured sketch artwork" />
-                <div class="floating-card glass-panel mini-card">
-                  <span>Featured</span>
-                  <strong>Portrait Study</strong>
-                  <small>From PKR 3,200</small>
-                </div>
+                <button class="hero-artwork-open quick-view" id="heroArtworkOpen" type="button" aria-label="View featured sketch details">
+                  <img id="heroArtworkImage" src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&w=900&q=80" alt="Featured sketch artwork" />
+                </button>
+              </div>
+              <div class="floating-card glass-panel mini-card">
+                <span>Featured</span>
+                <strong id="heroArtworkName">Portrait Study</strong>
+                <small id="heroArtworkPrice">From PKR 3,200</small>
               </div>
             </div>
           </div>
@@ -204,7 +206,7 @@
         <section class="container" id="about">
           <div class="about-panel glass-panel reveal-up">
             <div class="about-media">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Artist portrait" />
+              <img src="https://iili.io/nEcIgNj.md.jpg" alt="Adeel, ADEEL ART artist" />
             </div>
             <div class="about-copy">
               <span class="eyebrow">About the Artist</span>
@@ -350,6 +352,7 @@
     <div class="modal-overlay hidden" id="productModalOverlay">
       <div class="product-modal glass-panel" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <button class="modal-close" id="closeProductModal" aria-label="Close product details">×</button>
+        <button class="product-back-button" id="backToHomeBtn" type="button">← Back to Home</button>
         <div class="modal-content">
           <div class="gallery-column">
             <div class="gallery-main">

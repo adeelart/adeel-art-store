@@ -84,8 +84,14 @@ function renderProducts(stockOnly = false) {
 }
 
 function productForm(product = null) {
-  const current = product || { id: '', name: '', category: state.content.categories[0] || '', description: '', imageUrls: [], originalPrice: '', salePrice: '', availability: 'In Stock', paymentAvailability: 'Both Available', featured: false };
-  const imageFields = [0,1,2].map(index => `<div class="field"><label for="image${index}">Image URL ${index + 1}</label><input id="image${index}" name="image${index}" type="url" value="${escapeHtml(current.imageUrls[index] || '')}" placeholder="https://..." data-image-input="${index}" /><div class="image-preview" data-image-preview="${index}">Paste an image URL to preview</div></div>`).join('');
+  const current = product || { id: '', name: '', category: state.content.categories[0] || '', description: '', imageUrls: [], imageAdjustments: [], originalPrice: '', salePrice: '', availability: 'In Stock', paymentAvailability: 'Both Available', featured: false };
+  const imageFields = [0,1,2].map(index => {
+    const adjustment = current.imageAdjustments?.[index] || { x: 50, y: 50, zoom: 1 };
+    const focusX = Math.max(0, Math.min(100, Number(adjustment.x) || 50));
+    const focusY = Math.max(0, Math.min(100, Number(adjustment.y) || 50));
+    const zoom = Math.max(1, Math.min(2.5, Number(adjustment.zoom) || 1));
+    return `<div class="field"><label for="image${index}">Image URL ${index + 1}</label><input id="image${index}" name="image${index}" type="url" value="${escapeHtml(current.imageUrls[index] || '')}" placeholder="https://..." data-image-input="${index}" /><div class="image-preview" data-image-preview="${index}" data-focus-x="${focusX}" data-focus-y="${focusY}" data-zoom="${zoom}">Paste an image URL to preview</div></div>`;
+  }).join('');
   return `<div class="page-heading"><div><span class="eyebrow">${product ? 'Edit product' : 'New listing'}</span><h2>${product ? 'Edit Product' : 'Add Product'}</h2><p>Products are published from the versioned static catalog.</p></div></div>
     <form class="panel panel-pad" id="productForm" data-id="${escapeHtml(current.id)}">
       <div class="form-grid">
@@ -200,7 +206,39 @@ async function showImagePreview(index, url, box) {
     box.classList.add('error'); box.textContent = 'Image URL could not be loaded.'; return;
   }
   if (box.closest('form')?.querySelector(`[data-image-input="${index}"]`)?.value.trim() !== url) return;
-  box.innerHTML = `<img src="${escapeHtml(url)}" alt="Image ${index + 1} preview" />`;
+  const focusX = Math.max(0, Math.min(100, Number(box.dataset.focusX) || 50));
+  const focusY = Math.max(0, Math.min(100, Number(box.dataset.focusY) || 50));
+  const zoom = Math.max(1, Math.min(2.5, Number(box.dataset.zoom) || 1));
+  box.innerHTML = `<div class="image-crop-window" data-crop-window="${index}" data-focus-x="${focusX}" data-focus-y="${focusY}" data-zoom="${zoom}" style="--focus-x:${focusX}%;--focus-y:${focusY}%;--crop-zoom:${zoom}">
+      <img src="${escapeHtml(url)}" alt="Image ${index + 1} preview" draggable="false" />
+      <span class="crop-hint">Drag to reposition</span>
+    </div>
+    <div class="image-crop-controls">
+      <label>Zoom <input type="range" min="100" max="250" step="1" value="${Math.round(zoom * 100)}" data-image-zoom="${index}" /></label>
+      <button class="button" type="button" data-action="image-reset" data-index="${index}">Reset</button>
+      <small data-focus-label="${index}">${focusX}% · ${focusY}%</small>
+    </div>`;
+}
+
+function updateCropWindow(cropWindow) {
+  const focusX = Math.max(0, Math.min(100, Number(cropWindow.dataset.focusX) || 50));
+  const focusY = Math.max(0, Math.min(100, Number(cropWindow.dataset.focusY) || 50));
+  const zoom = Math.max(1, Math.min(2.5, Number(cropWindow.dataset.zoom) || 1));
+  cropWindow.dataset.focusX = String(focusX);
+  cropWindow.dataset.focusY = String(focusY);
+  cropWindow.dataset.zoom = String(zoom);
+  cropWindow.style.setProperty('--focus-x', `${focusX}%`);
+  cropWindow.style.setProperty('--focus-y', `${focusY}%`);
+  cropWindow.style.setProperty('--crop-zoom', String(zoom));
+  const preview = cropWindow.closest('[data-image-preview]');
+  preview.dataset.focusX = String(focusX);
+  preview.dataset.focusY = String(focusY);
+  preview.dataset.zoom = String(zoom);
+  const index = cropWindow.dataset.cropWindow;
+  const slider = preview.querySelector(`[data-image-zoom="${index}"]`);
+  const label = preview.querySelector(`[data-focus-label="${index}"]`);
+  if (slider) slider.value = String(Math.round(zoom * 100));
+  if (label) label.textContent = `${Math.round(focusX)}% · ${Math.round(focusY)}%`;
 }
 
 async function validateAllImages() {
@@ -213,16 +251,29 @@ async function validateAllImages() {
 async function saveProduct(form) {
   const formData = new FormData(form);
   const id = form.dataset.id || `product-${crypto.randomUUID()}`;
-  const imageUrls = [0,1,2].map(index => String(formData.get(`image${index}`) || '').trim()).filter(Boolean);
+  const imageEntries = [0,1,2].map(index => {
+    const imageUrl = String(formData.get(`image${index}`) || '').trim();
+    const preview = form.querySelector(`[data-image-preview="${index}"]`);
+    return imageUrl ? {
+      url: imageUrl,
+      adjustment: {
+        x: Number(preview?.dataset.focusX) || 50,
+        y: Number(preview?.dataset.focusY) || 50,
+        zoom: Number(preview?.dataset.zoom) || 1
+      }
+    } : null;
+  }).filter(Boolean);
+  const imageUrls = imageEntries.map(entry => entry.url);
   if (!imageUrls.length) throw new Error('Add at least one product image URL.');
-  for (let index = 0; index < imageUrls.length; index += 1) {
-    if (!await imageIsValid(imageUrls[index])) throw new Error('Image URL could not be loaded.');
+  for (const imageUrl of imageUrls) {
+    if (!await imageIsValid(imageUrl)) throw new Error('Image URL could not be loaded.');
   }
   const category = String(formData.get('category'));
   const productType = category.toLowerCase().includes('basic') ? 'Basic' : category.toLowerCase().includes('medium') ? 'Medium' : category.toLowerCase().includes('high') ? 'High-End' : category;
   const product = {
     id, productId: state.content.products.find(item => item.id === id)?.productId || `ART-${String(Date.now()).slice(-6)}`,
     name: String(formData.get('name')).trim(), category, productType, description: String(formData.get('description')).trim(), imageUrls,
+    imageAdjustments: imageEntries.map(entry => entry.adjustment),
     originalPrice: Number(formData.get('originalPrice')), salePrice: Number(formData.get('salePrice')),
     availability: String(formData.get('availability')), paymentAvailability: String(formData.get('paymentAvailability')),
     featured: formData.has('featured'), discountLabel: `${Math.max(0, Math.round((1 - Number(formData.get('salePrice')) / Math.max(1, Number(formData.get('originalPrice')))) * 100))}% Off`
@@ -265,6 +316,15 @@ async function publishChanges() {
 }
 
 async function handleAction(action, target) {
+  if (action === 'image-reset') {
+    const cropWindow = target.closest('[data-image-preview]')?.querySelector(`[data-crop-window="${target.dataset.index}"]`);
+    if (cropWindow) {
+      cropWindow.dataset.focusX = '50';
+      cropWindow.dataset.focusY = '50';
+      cropWindow.dataset.zoom = '1';
+      updateCropWindow(cropWindow);
+    }
+  }
   if (action === 'edit-product') { state.editingId = target.dataset.id; switchSection('Add Product'); }
   if (action === 'stock-toggle') {
     const product = state.content.products.find(item => item.id === target.dataset.id);
@@ -324,6 +384,15 @@ root.addEventListener('click', async event => {
 
 root.addEventListener('input', event => {
   if (['productSearch', 'productCategoryFilter', 'stockFilter'].includes(event.target.id)) handleProductFilter();
+  if (event.target.matches('[data-image-zoom]')) {
+    const index = event.target.dataset.imageZoom;
+    const cropWindow = document.querySelector(`[data-crop-window="${index}"]`);
+    if (cropWindow) {
+      cropWindow.dataset.zoom = String(Number(event.target.value) / 100);
+      updateCropWindow(cropWindow);
+    }
+    return;
+  }
   if (event.target.matches('[data-image-input]')) {
     const index = Number(event.target.dataset.imageInput);
     const box = document.querySelector(`[data-image-preview="${index}"]`);
@@ -331,6 +400,38 @@ root.addEventListener('input', event => {
     event.target.previewTimer = setTimeout(() => showImagePreview(index, event.target.value.trim(), box), 350);
   }
 });
+
+root.addEventListener('pointerdown', event => {
+  const cropWindow = event.target.closest('[data-crop-window]');
+  if (!cropWindow) return;
+  event.preventDefault();
+  cropWindow.setPointerCapture(event.pointerId);
+  cropWindow.dataset.dragging = 'true';
+  cropWindow.dataset.pointerX = String(event.clientX);
+  cropWindow.dataset.pointerY = String(event.clientY);
+});
+
+root.addEventListener('pointermove', event => {
+  const cropWindow = event.target.closest('[data-crop-window]');
+  if (!cropWindow || cropWindow.dataset.dragging !== 'true') return;
+  const bounds = cropWindow.getBoundingClientRect();
+  const zoom = Math.max(1, Number(cropWindow.dataset.zoom) || 1);
+  const deltaX = event.clientX - Number(cropWindow.dataset.pointerX);
+  const deltaY = event.clientY - Number(cropWindow.dataset.pointerY);
+  cropWindow.dataset.focusX = String(Number(cropWindow.dataset.focusX) - deltaX / bounds.width * 100 / zoom);
+  cropWindow.dataset.focusY = String(Number(cropWindow.dataset.focusY) - deltaY / bounds.height * 100 / zoom);
+  cropWindow.dataset.pointerX = String(event.clientX);
+  cropWindow.dataset.pointerY = String(event.clientY);
+  updateCropWindow(cropWindow);
+});
+
+function stopImageDrag(event) {
+  const cropWindow = event.target.closest('[data-crop-window]');
+  if (cropWindow) cropWindow.dataset.dragging = 'false';
+}
+
+root.addEventListener('pointerup', stopImageDrag);
+root.addEventListener('pointercancel', stopImageDrag);
 
 root.addEventListener('change', async event => {
   if (event.target.matches('.order-status')) {

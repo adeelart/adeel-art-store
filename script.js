@@ -227,6 +227,7 @@ const elements = {
   jazzCashDetails: document.getElementById('jazzCashDetails'),
   nayapayDetails: document.getElementById('nayaPayDetails'),
   productModalOverlay: document.getElementById('productModalOverlay'),
+  productModal: document.getElementById('productModal'),
   modalMainImage: document.getElementById('modalMainImage'),
   thumbnailRow: document.getElementById('thumbnailRow'),
   modalCategory: document.getElementById('modalCategory'),
@@ -257,6 +258,14 @@ function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>"']/g, (character) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[character]));
+}
+
+function getProductImageStyle(product, index = 0) {
+  const adjustment = product.imageAdjustments?.[index] || { x: 50, y: 50, zoom: 1 };
+  const x = Math.max(0, Math.min(100, Number(adjustment.x) || 50));
+  const y = Math.max(0, Math.min(100, Number(adjustment.y) || 50));
+  const zoom = Math.max(1, Math.min(2.5, Number(adjustment.zoom) || 1));
+  return `--image-focus-x:${x}%;--image-focus-y:${y}%;--image-zoom:${zoom}`;
 }
 
 async function loadSiteContent() {
@@ -470,7 +479,7 @@ function renderCart() {
     card.className = 'cart-item';
     const outOfStock = product.availability === 'Out of Stock';
     card.innerHTML = `
-      <img src="${escapeHtml(product.imageUrls[0] || '')}" alt="${escapeHtml(product.name)}" />
+      <div class="cart-image-frame"><img src="${escapeHtml(product.imageUrls[0] || '')}" alt="${escapeHtml(product.name)}" style="${getProductImageStyle(product)}" /></div>
       <div class="cart-item-body">
         <h4>${escapeHtml(product.name)}</h4>
         <p>${formatPrice(product.salePrice)} each</p>
@@ -505,12 +514,15 @@ function renderCart() {
 function renderProductCard(product) {
   const card = document.createElement('article');
   card.className = 'product-card';
+  card.dataset.productId = product.id;
   const discount = Math.round(((product.originalPrice - product.salePrice) / product.originalPrice) * 100);
   const outOfStock = product.availability === 'Out of Stock';
 
   card.innerHTML = `
     <div class="product-media">
-      <img src="${escapeHtml(product.imageUrls[0] || '')}" alt="${escapeHtml(product.name)}" loading="lazy" />
+      <button class="product-image-open quick-view" type="button" data-product-id="${escapeHtml(product.id)}" aria-label="View ${escapeHtml(product.name)} details">
+        <img src="${escapeHtml(product.imageUrls[0] || '')}" alt="${escapeHtml(product.name)}" loading="lazy" style="${getProductImageStyle(product)}" />
+      </button>
       <span class="product-badge">${escapeHtml(product.productType)}</span>
     </div>
     <div class="product-body">
@@ -518,7 +530,7 @@ function renderProductCard(product) {
         <span>${escapeHtml(product.category)}</span>
         <span class="${outOfStock ? 'stock-out-label' : ''}">${escapeHtml(product.availability)}</span>
       </div>
-      <h3>${escapeHtml(product.name)}</h3>
+      <h3><button class="product-title-open quick-view" type="button" data-product-id="${escapeHtml(product.id)}">${escapeHtml(product.name)}</button></h3>
       <p class="product-description">${escapeHtml(product.description)}</p>
       <div class="price-row">
         <span class="old-price">${formatPrice(product.originalPrice)}</span>
@@ -538,6 +550,17 @@ function renderProductCard(product) {
 function renderFeaturedProducts() {
   const featuredProducts = allProducts.filter((product) => product.featured);
   const featured = (featuredProducts.length ? featuredProducts : allProducts).slice(0, 3);
+  const heroProduct = featured[0];
+  if (heroProduct) {
+    const heroButton = document.getElementById('heroArtworkOpen');
+    const heroImage = document.getElementById('heroArtworkImage');
+    heroButton.dataset.productId = heroProduct.id;
+    heroImage.src = heroProduct.imageUrls[0] || '';
+    heroImage.alt = heroProduct.name;
+    heroImage.style.cssText = getProductImageStyle(heroProduct);
+    document.getElementById('heroArtworkName').textContent = heroProduct.name;
+    document.getElementById('heroArtworkPrice').textContent = `From ${formatPrice(heroProduct.salePrice)}`;
+  }
   elements.featuredProducts.innerHTML = '';
   featured.forEach((product) => {
     elements.featuredProducts.appendChild(renderProductCard(product));
@@ -593,8 +616,10 @@ function openProductModal(productId) {
   if (!product) return;
 
   state.selectedProduct = product;
+  elements.productModal.scrollTop = 0;
   elements.modalMainImage.src = product.imageUrls[0];
   elements.modalMainImage.alt = product.name;
+  elements.modalMainImage.style.cssText = getProductImageStyle(product, 0);
   elements.modalCategory.textContent = product.category;
   elements.modalTitle.textContent = product.name;
   elements.modalDescription.textContent = product.description;
@@ -612,9 +637,10 @@ function openProductModal(productId) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = index === 0 ? 'active' : '';
-    button.innerHTML = `<img src="${escapeHtml(image)}" alt="${escapeHtml(product.name)} view ${index + 1}" loading="lazy" />`;
+    button.innerHTML = `<img src="${escapeHtml(image)}" alt="${escapeHtml(product.name)} view ${index + 1}" loading="lazy" style="${getProductImageStyle(product, index)}" />`;
     button.addEventListener('click', () => {
       elements.modalMainImage.src = image;
+      elements.modalMainImage.style.cssText = getProductImageStyle(product, index);
       [...elements.thumbnailRow.children].forEach((thumb) => thumb.classList.remove('active'));
       button.classList.add('active');
     });
@@ -626,6 +652,12 @@ function openProductModal(productId) {
 
 function closeProductModal() {
   elements.productModalOverlay.classList.add('hidden');
+}
+
+function backToHome() {
+  closeProductModal();
+  history.replaceState({}, '', `${location.pathname}${location.search}#home`);
+  document.getElementById('home').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function scrollToCheckout() {
@@ -689,7 +721,7 @@ function renderCheckoutSummary() {
     const item = document.createElement('div');
     item.className = 'preview-item';
     item.innerHTML = `
-      <img src="${escapeHtml(product.imageUrls[0] || '')}" alt="${escapeHtml(product.name)}" />
+      <div class="preview-image-frame"><img src="${escapeHtml(product.imageUrls[0] || '')}" alt="${escapeHtml(product.name)}" style="${getProductImageStyle(product)}" /></div>
       <div>
         <h4>${escapeHtml(product.name)}</h4>
         <p>Qty: ${entry.quantity}</p>
@@ -1064,6 +1096,10 @@ function bindEvents() {
       closeProductModal();
     }
 
+    if (event.target.closest('#backToHomeBtn')) {
+      backToHome();
+    }
+
     if (event.target.closest('#contactUsBtn')) {
       closeConfirmation();
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
@@ -1136,6 +1172,7 @@ function bindEvents() {
   elements.modalMainImage.addEventListener('click', () => {
     imageViewerImage.src = elements.modalMainImage.src;
     imageViewerImage.alt = elements.modalMainImage.alt;
+    imageViewerImage.style.cssText = elements.modalMainImage.style.cssText;
     imageViewer.classList.remove('hidden');
   });
   imageViewerImage.addEventListener('click', () => imageViewerImage.classList.toggle('zoomed'));

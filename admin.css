@@ -70,6 +70,15 @@ textarea { min-height: 94px; resize: vertical; }
 .image-preview { min-height: 92px; display: grid; place-items: center; margin-top: 7px; border: 1px dashed var(--line); border-radius: 10px; color: var(--muted); font-size: 11px; text-align: center; overflow: hidden; }
 .image-preview img { width: 100%; height: 110px; object-fit: cover; }
 .image-preview.error { color: #a54238; border-color: rgba(165,66,56,.45); }
+.image-crop-window { position: relative; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 8px; background: #e6e9e1; cursor: grab; touch-action: none; user-select: none; }
+.image-crop-window:active { cursor: grabbing; }
+.image-preview .image-crop-window img { width: 100%; height: 100%; object-fit: cover; object-position: var(--focus-x, 50%) var(--focus-y, 50%); transform: scale(var(--crop-zoom, 1)); transition: transform .12s ease-out; pointer-events: none; }
+.crop-hint { position: absolute; left: 8px; bottom: 8px; padding: 4px 7px; border-radius: 999px; background: rgba(19,28,22,.65); color: #fff; font-size: 10px; pointer-events: none; }
+.image-crop-controls { width: 100%; display: grid; grid-template-columns: minmax(90px,1fr) auto auto; align-items: center; gap: 8px; padding: 8px 2px 2px; }
+.image-crop-controls label { display: grid; grid-template-columns: auto minmax(60px,1fr); align-items: center; gap: 7px; color: var(--muted); font-size: 11px; }
+.image-crop-controls input[type="range"] { width: 100%; padding: 0; accent-color: var(--green); }
+.image-crop-controls .button { min-height: 32px; padding: 5px 9px; font-size: 11px; }
+.image-crop-controls small { color: var(--muted); font-size: 10px; white-space: nowrap; }
 .check-row { display: flex; gap: 9px; align-items: center; }
 .check-row input { width: 17px; height: 17px; }
 .form-actions { display: flex; gap: 9px; justify-content: end; margin-top: 18px; }
@@ -109,4 +118,6 @@ td { font-size: 13px; }
   .row-actions { grid-column: 1/-1; justify-content: start; }
   .publish-banner { align-items: start; flex-direction: column; }
   .login-panel { padding: 28px 22px; }
+  .image-crop-controls { grid-template-columns: minmax(80px,1fr) auto; }
+  .image-crop-controls small { grid-column: 1 / -1; text-align: right; }
 }
