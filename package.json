@@ -1,0 +1,16 @@
+{
+  "name": "adeel-art-store",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "netlify dev",
+    "hash-admin-password": "node scripts/hash-admin-password.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.0.0"
+  }
+}

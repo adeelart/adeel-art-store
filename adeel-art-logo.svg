@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 190" role="img" aria-labelledby="title desc">
+  <title id="title">Adeel Art Drawings</title>
+  <desc id="desc">A calligraphic A and fountain pen nib beside ADEEL ART DRAWINGS, Fine Art and Sketches.</desc>
+  <g fill="none" stroke="#171717" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M136 142c-42 29-86 4-57-23 20-19 48-15 74-4 14-33 29-74 49-91-6 30-12 65-9 92 3 26 14 42 35 40" stroke-width="7"/>
+    <path d="M157 117c22-3 54-25 80-62m-63 58c14-33 27-64 47-89-3 20-6 44 5 51" stroke-width="5"/>
+    <path d="M220 19 254 5l-14 39-17-8z" fill="#171717" stroke-width="3"/>
+    <circle cx="237" cy="23" r="3.5" fill="#f7f6f2" stroke="none"/>
+    <path d="M236 53c-11 15-25 30-39 39m38-37c20-9 34-21 48-36" stroke-width="3"/>
+  </g>
+  <text x="300" y="84" fill="#171717" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="2">ADEEL ART</text>
+  <text x="303" y="126" fill="#242424" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="700" letter-spacing="3">ART DRAWINGS</text>
+  <text x="304" y="160" fill="#262626" font-family="'Segoe Script', 'Brush Script MT', cursive" font-size="26" font-style="italic">Fine Art &amp; Sketches</text>
+</svg>

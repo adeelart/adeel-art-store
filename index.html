@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADEEL ART | Premium Sketch & Art Store</title>
+    <meta
+      name="description"
+      content="ADEEL ART offers premium sketch and custom art pieces with a refined glassmorphism storefront. Explore hand-drawn sketches, artwork, and custom commissions."
+    />
+    <meta name="theme-color" content="#eef4ff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="bg-orb orb-one"></div>
+      <div class="bg-orb orb-two"></div>
+      <div class="bg-orb orb-three"></div>
+
+      <header class="topbar glass-panel">
+        <nav class="container nav-bar">
+          <a href="#home" class="brand" aria-label="ADEEL ART home">
+            <img class="brand-logo" src="adeel-art-logo.svg" alt="ADEEL ART DRAWINGS — Fine Art & Sketches" />
+          </a>
+
+          <div class="nav-links desktop-nav">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop / Sketches</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About Artist</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div class="nav-actions">
+            <button class="icon-button" id="searchTrigger" aria-label="Search sketches">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.94 12.58l4.37 4.37 1.41-1.41-4.37-4.37A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 104.5 9.5 5.5 5.5 0 00-4.5-9.5z"/></svg>
+            </button>
+            <button class="icon-button" id="wishlistTrigger" aria-label="Wishlist">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 016.5 4c1.74 0 3.41.81 4.5 2.09A6.02 6.02 0 0115.5 4 4.5 4.5 0 0120 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </button>
+            <button class="cart-button" id="cartToggle" aria-label="Shopping cart">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 110 4 2 2 0 010-4zm10 0a2 2 0 110 4 2 2 0 010-4zM7.2 15h10.7a2 2 0 001.94-1.5L21 7H6.2L5.5 4H2v2h2.3l2.8 9.9L7 18H19v-2H7.2z"/></svg>
+              <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="menu-toggle mobile-only" id="menuToggle" aria-label="Open menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+
+        <div class="mobile-menu glass-panel" id="mobileMenu">
+          <a href="#home">Home</a>
+          <a href="#shop">Shop / Sketches</a>
+          <a href="#categories">Categories</a>
+          <a href="#about">About Artist</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </header>
+
+      <main>
+        <section id="home" class="hero container">
+          <div class="hero-copy reveal-up">
+            <span class="eyebrow">Original Sketch Art</span>
+            <h1>Detailed art for spaces, stories, and lasting memories.</h1>
+            <p>
+              Handcrafted pencil, ink, and portrait sketches designed for collectors, gift-givers,
+              and interior lovers who appreciate premium art with a personal touch.
+            </p>
+            <div class="hero-actions">
+              <a href="#shop" class="primary-button">Explore Sketches</a>
+              <button class="secondary-button" id="customSketchBtn">Order Custom Sketch</button>
+            </div>
+            <div class="stat-row">
+              <div>
+                <strong>1.2k+</strong>
+                <span>Artworks Delivered</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>Customer Rating</span>
+              </div>
+              <div>
+                <strong>3-7 days</strong>
+                <span>Fast Delivery</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal-up delay-1">
+            <div class="showcase-card glass-panel">
+              <div class="showcase-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="showcase-grid">
+                <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&w=900&q=80" alt="Featured sketch artwork" />
+                <div class="floating-card glass-panel mini-card">
+                  <span>Featured</span>
+                  <strong>Portrait Study</strong>
+                  <small>From PKR 3,200</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container" id="featured">
+          <div class="section-header reveal-up">
+            <div>
+              <span class="eyebrow">Featured Collection</span>
+              <h2>Best-selling sketches</h2>
+            </div>
+            <a href="#shop" class="text-link">Browse all</a>
+          </div>
+          <div class="product-grid" id="featuredProducts"></div>
+        </section>
+
+        <section class="container" id="categories">
+          <div class="section-header reveal-up">
+            <div>
+              <span class="eyebrow">Categories</span>
+              <h2>Choose your style</h2>
+            </div>
+          </div>
+          <div class="category-grid" id="categoryGrid">
+            <article class="category-card glass-panel reveal-up">
+              <span class="badge badge-soft">Basic</span>
+              <h3>Basic Sketches</h3>
+              <p>Clean, charming, and highly affordable line work for gifting and everyday decor.</p>
+              <button class="link-button" data-category="Basic Sketches">View collection</button>
+            </article>
+            <article class="category-card glass-panel reveal-up delay-1">
+              <span class="badge badge-soft">Medium</span>
+              <h3>Medium Sketches</h3>
+              <p>Balanced detail, richer texture, and deeper personality for premium everyday pieces.</p>
+              <button class="link-button" data-category="Medium Sketches">View collection</button>
+            </article>
+            <article class="category-card glass-panel reveal-up delay-2">
+              <span class="badge badge-soft">Premium</span>
+              <h3>High-End / Professional</h3>
+              <p>Gallery-level portraiture and highly detailed craftsmanship for collectors.</p>
+              <button class="link-button" data-category="High-End / Professional Sketches">View collection</button>
+            </article>
+            <article class="category-card glass-panel reveal-up delay-3 custom-card">
+              <span class="badge badge-strong">Custom</span>
+              <h3>Custom Sketch</h3>
+              <p>Commission a truly personal artwork from a photo, memory, or inspiration.</p>
+              <button class="primary-button narrow" id="customSketchCardBtn">Order via WhatsApp</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="container" id="shop">
+          <div class="section-header reveal-up">
+            <div>
+              <span class="eyebrow">Shop</span>
+              <h2>Sketches & artwork</h2>
+            </div>
+          </div>
+
+          <div class="shop-toolbar glass-panel reveal-up">
+            <label class="search-box" aria-label="Search product">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.94 12.58l4.37 4.37 1.41-1.41-4.37-4.37A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 104.5 9.5 5.5 5.5 0 00-4.5-9.5z"/></svg>
+              <input id="searchInput" type="search" placeholder="Search by sketch name or category" />
+            </label>
+
+            <select id="categoryFilter" aria-label="Filter by category">
+              <option value="all">All Categories</option>
+              <option value="Basic">Basic Sketches</option>
+              <option value="Medium">Medium Sketches</option>
+              <option value="High-End">High-End Sketches</option>
+            </select>
+
+            <select id="priceFilter" aria-label="Filter by price range">
+              <option value="all">All Prices</option>
+              <option value="0-4000">Under PKR 4,000</option>
+              <option value="4000-8000">PKR 4,000–8,000</option>
+              <option value="8000-15000">PKR 8,000–15,000</option>
+              <option value="15000+">Above PKR 15,000</option>
+            </select>
+
+            <button class="secondary-button small" id="clearFilters">Clear</button>
+          </div>
+
+          <div class="product-grid" id="productGrid"></div>
+          <div class="empty-state glass-panel" id="emptyProducts" hidden>
+            <div class="empty-icon">✦</div>
+            <h3>No sketches match your filters.</h3>
+            <p>Try another search term or clear your filter to explore more art.</p>
+          </div>
+        </section>
+
+        <section class="container" id="about">
+          <div class="about-panel glass-panel reveal-up">
+            <div class="about-media">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Artist portrait" />
+            </div>
+            <div class="about-copy">
+              <span class="eyebrow">About the Artist</span>
+              <h2>Sketching stories with detail, emotion, and artistry.</h2>
+              <p>
+                Welcome to Velvet Sketch Atelier — a place where details, memories, and human expression are transformed into hand-drawn artwork. Every stroke is crafted to capture the essence of the subject and the feeling behind the moment.
+              </p>
+              <p>
+                I create sketches for portraits, special gifts, homes, and custom commissions. My process blends realism, light shading, and personal storytelling to produce artwork that feels meaningful and premium.
+              </p>
+              <ul>
+                <li>Portraits and lifelike character studies</li>
+                <li>Custom gifts and memory-based drawings</li>
+                <li>Professional and personal home decor artwork</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="container" id="faq">
+          <div class="section-header reveal-up">
+            <div>
+              <span class="eyebrow">FAQ</span>
+              <h2>Frequently asked questions</h2>
+            </div>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">How can I place an order?<span>+</span></button>
+              <div class="faq-answer"><p>Choose a sketch, add it to the cart, and complete the secure checkout form with your name, delivery address, and preferred payment method.</p></div>
+            </div>
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">How does Cash on Delivery work?<span>+</span></button>
+              <div class="faq-answer"><p>Select Cash on Delivery at checkout. You pay when your order is delivered to your doorstep.</p></div>
+            </div>
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">How can I pay online?<span>+</span></button>
+              <div class="faq-answer"><p>Choose Online Payment during checkout and the payment instructions for JazzCash and NayaPay will appear only then.</p></div>
+            </div>
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">How does JazzCash payment work?<span>+</span></button>
+              <div class="faq-answer"><p>JazzCash details are shown only when you select online payment at checkout. You can transfer the total and share the confirmation with the artist.</p></div>
+            </div>
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">How does NayaPay payment work?<span>+</span></button>
+              <div class="faq-answer"><p>After selecting online payment, the NayaPay details are displayed in a secure payment box for your convenience and confirmation.</p></div>
+            </div>
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">How can I order a custom sketch?<span>+</span></button>
+              <div class="faq-answer"><p>Use the custom sketch button or the WhatsApp contact option to send your reference photos, theme, and requirements.</p></div>
+            </div>
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">How long does delivery take?<span>+</span></button>
+              <div class="faq-answer"><p>Delivery timelines vary by location and artwork size, but standard orders typically take 3-7 business days after confirmation.</p></div>
+            </div>
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">Can I request a specific sketch?<span>+</span></button>
+              <div class="faq-answer"><p>Yes. You can request custom work, personalized portraits, or a specific reference style through the custom sketch order flow.</p></div>
+            </div>
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">How can I track my order?<span>+</span></button>
+              <div class="faq-answer"><p>Use the order tracking section below to enter your order number and view the current status of your artwork.</p></div>
+            </div>
+            <div class="faq-item glass-panel reveal-up">
+              <button class="faq-question">How can I contact the artist?<span>+</span></button>
+              <div class="faq-answer"><p>Use the contact section or WhatsApp button to connect directly for questions, custom commissions, and order updates.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container" id="contact">
+          <div class="section-header reveal-up">
+            <div>
+              <span class="eyebrow">Contact</span>
+              <h2>Let’s create something personal</h2>
+            </div>
+          </div>
+          <div class="contact-grid">
+            <a class="contact-card glass-panel reveal-up" href="tel:+923058716194" aria-label="Call the artist">
+              <span class="contact-icon">☎</span>
+              <strong>Phone</strong>
+              <small>+92 3058716194</small>
+            </a>
+            <a class="contact-card glass-panel reveal-up delay-1" href="mailto:adeel1152000@gmail.com?subject=Sketch%20Inquiry" aria-label="Email the artist">
+              <span class="contact-icon">✉</span>
+              <strong>Email</strong>
+              <small>adeel1152000@gmail.com</small>
+            </a>
+            <a class="contact-card glass-panel reveal-up delay-2" href="https://wa.me/923058716194?text=Hi%20I%20want%20to%20order%20a%20custom%20sketch" target="_blank" rel="noreferrer" aria-label="Contact on WhatsApp">
+              <span class="contact-icon">✆</span>
+              <strong>WhatsApp</strong>
+              <small>Direct message</small>
+            </a>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="site-footer container">
+        <div class="footer-brand">
+          <img class="brand-logo" src="adeel-art-logo.svg" alt="ADEEL ART DRAWINGS — Fine Art & Sketches" />
+        </div>
+        <div class="footer-links">
+          <a href="#shop">Shop</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </footer>
+    </div>
+
+    <aside class="cart-drawer glass-panel" id="cartDrawer" aria-label="Shopping cart">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-button" id="closeCart" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty" hidden>
+        <div class="empty-icon">🛒</div>
+        <h4>Your cart is empty.</h4>
+        <p>Add a sketch to begin your order.</p>
+      </div>
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">PKR 0</strong>
+        </div>
+        <div class="summary-row">
+          <span>Delivery</span>
+          <strong id="cartDelivery">PKR 0</strong>
+        </div>
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <strong id="cartTotal">PKR 0</strong>
+        </div>
+        <div class="cart-actions">
+          <button class="secondary-button" id="continueShoppingBtn">Continue Shopping</button>
+          <button class="primary-button" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="modal-overlay hidden" id="productModalOverlay">
+      <div class="product-modal glass-panel" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" id="closeProductModal" aria-label="Close product details">×</button>
+        <div class="modal-content">
+          <div class="gallery-column">
+            <div class="gallery-main">
+              <img id="modalMainImage" src="" alt="Featured sketch" />
+            </div>
+            <div class="thumbnail-row" id="thumbnailRow"></div>
+          </div>
+          <div class="detail-column">
+            <span class="eyebrow" id="modalCategory">Basic Sketches</span>
+            <h3 id="modalTitle">Sketch Title</h3>
+            <p id="modalDescription"></p>
+            <div class="price-stack">
+              <span class="old-price" id="modalOriginalPrice"></span>
+              <span class="sale-price" id="modalSalePrice"></span>
+            </div>
+            <div class="meta-row">
+              <span id="modalAvailability"></span>
+            </div>
+            <div class="modal-actions">
+              <button class="primary-button" id="modalAddToCart">Add to Cart</button>
+              <button class="secondary-button" id="modalBuyNow">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-viewer hidden" id="imageViewer" role="dialog" aria-modal="true" aria-label="Artwork image viewer">
+      <button class="image-viewer-close" id="closeImageViewer" aria-label="Close image viewer">×</button>
+      <img id="imageViewerImage" src="" alt="Expanded artwork" />
+    </div>
+
+    <div class="modal-overlay hidden" id="checkoutModalOverlay">
+      <div class="checkout-modal glass-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+        <button class="modal-close" id="closeCheckoutModal" aria-label="Close checkout">×</button>
+        <div class="checkout-header">
+          <div>
+            <span class="eyebrow">Checkout</span>
+            <h3 id="checkoutTitle">Complete your order</h3>
+          </div>
+        </div>
+
+        <div class="checkout-layout">
+          <form id="checkoutForm" class="checkout-form">
+            <div class="field-row two-up">
+              <label>
+                <span>Full Name</span>
+                <input type="text" name="fullName" required />
+              </label>
+              <label>
+                <span>Phone Number</span>
+                <input type="tel" name="phone" required />
+              </label>
+            </div>
+
+            <div class="field-row two-up">
+              <label>
+                <span>Email Address</span>
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                <span>City</span>
+                <input type="text" name="city" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Complete Delivery Address</span>
+              <textarea name="address" rows="3" required></textarea>
+            </label>
+
+            <label>
+              <span>Additional Instructions (optional)</span>
+              <textarea name="notes" rows="2"></textarea>
+            </label>
+
+            <div class="payment-box">
+              <span class="eyebrow">Payment Method</span>
+              <div class="payment-options">
+                <label class="payment-option" data-payment-option="Cash on Delivery">
+                  <input type="radio" name="paymentMethod" value="Cash on Delivery" checked />
+                  <span>Cash on Delivery</span>
+                </label>
+                <label class="payment-option" data-payment-option="Online Payment">
+                  <input type="radio" name="paymentMethod" value="Online Payment" />
+                  <span>Online Payment</span>
+                </label>
+              </div>
+              <p class="payment-availability-message" id="paymentAvailabilityMessage" hidden></p>
+            </div>
+
+            <div class="online-payment-box hidden" id="onlinePaymentBox">
+              <div class="payment-details glass-panel">
+                <h4>Payment Details</h4>
+                <div class="payment-detail-item">
+                  <strong>JazzCash</strong>
+                  <p id="jazzCashDetails">Loading…</p>
+                </div>
+                <div class="payment-detail-item">
+                  <strong>NayaPay</strong>
+                  <p id="nayaPayDetails">Loading…</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkout-summary">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="checkoutSubtotal">PKR 0</strong>
+              </div>
+              <div class="summary-row">
+                <span>Delivery</span>
+                <strong id="checkoutDelivery">PKR 0</strong>
+              </div>
+              <div class="summary-row total-row">
+                <span>Total</span>
+                <strong id="checkoutTotal">PKR 0</strong>
+              </div>
+            </div>
+
+            <button type="submit" class="primary-button submit-order">Confirm Order</button>
+          </form>
+
+          <div class="order-preview glass-panel">
+            <span class="eyebrow">Order Summary</span>
+            <div id="checkoutOrderSummaryList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="confirmationOverlay">
+      <div class="confirmation-card glass-panel" role="dialog" aria-modal="true">
+        <div class="success-badge">✓</div>
+        <span class="eyebrow">Order Confirmed</span>
+        <h3>Thank you for your purchase.</h3>
+        <div class="confirmation-meta">
+          <div><span>Customer</span><strong id="confirmationCustomerName">—</strong></div>
+          <div><span>Total</span><strong id="confirmationTotal">PKR 0</strong></div>
+          <div><span>Payment</span><strong id="confirmationPaymentMethod">—</strong></div>
+          <div><span>Status</span><strong>Order Confirmed</strong></div>
+        </div>
+        <div class="confirmation-block" id="confirmationDetails"></div>
+        <div class="confirmation-actions">
+          <button class="primary-button" id="contactUsBtn">Contact Us</button>
+          <a class="secondary-button" id="whatsappOrderBtn" href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <div class="loader-overlay" id="loaderOverlay">
+      <div class="loader-ring"></div>
+      <p>Loading products...</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
