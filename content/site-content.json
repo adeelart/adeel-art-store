@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-07T17:06:28.539Z",
-  "publishedAt": "2026-10-07T17:06:28.539Z",
+  "version": "2026-10-07T17:06:58.121Z",
+  "publishedAt": "2026-10-07T17:06:58.121Z",
   "categories": [
     "Basic Sketches",
     "Medium Sketches",
@@ -65,44 +65,6 @@
     ]
   },
   "products": [
-    {
-      "id": "basic-2",
-      "productId": "BSK-102",
-      "name": "Window Light",
-      "category": "Basic Sketches",
-      "productType": "Basic",
-      "imageUrls": [
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80"
-      ],
-      "originalPrice": 5200,
-      "salePrice": 3900,
-      "description": "Quiet lines and atmospheric depth bring warmth into a small, elegant sketch for interior styling and personal shelves.",
-      "availability": "In Stock",
-      "paymentAvailability": "Both Available",
-      "featured": true,
-      "discountLabel": "25% Off"
-    },
-    {
-      "id": "basic-3",
-      "productId": "BSK-103",
-      "name": "Bloom Study",
-      "category": "Basic Sketches",
-      "productType": "Basic",
-      "imageUrls": [
-        "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80"
-      ],
-      "originalPrice": 6100,
-      "salePrice": 4600,
-      "description": "A floral composition with a soft, hand-drawn finish that suits art lovers seeking a calm, uplifting statement piece.",
-      "availability": "In Stock",
-      "paymentAvailability": "Both Available",
-      "featured": true,
-      "discountLabel": "25% Off"
-    },
     {
       "id": "medium-1",
       "productId": "MSK-201",
@@ -216,6 +178,23 @@
       "paymentAvailability": "Both Available",
       "featured": false,
       "discountLabel": "18% Off"
+    },
+    {
+      "id": "product-6541f53a-e17c-4e54-a748-4ef2447926b5",
+      "productId": "ART-815211",
+      "name": "Sakoona Sketch",
+      "category": "Basic Sketches",
+      "productType": "Basic",
+      "description": "a4",
+      "imageUrls": [
+        "https://iili.io/nE5fUiv.md.jpg"
+      ],
+      "originalPrice": 1800,
+      "salePrice": 1000,
+      "availability": "In Stock",
+      "paymentAvailability": "Both Available",
+      "featured": true,
+      "discountLabel": "44% Off"
     }
   ]
 }
