@@ -1,25 +1,26 @@
 {
-  "version": "2026-10-07T19:16:32.517Z",
-  "publishedAt": "2026-10-07T19:16:32.517Z",
+  "version": "2026-10-08T11:41:17.741Z",
+  "publishedAt": "2026-10-08T11:41:17.741Z",
   "categories": [
     "Basic Sketches",
     "Medium Sketches",
     "High-End / Professional Sketches",
+    "Family Or Single Person Sketchs",
     "Custom Sketch"
   ],
   "settings": {
     "storeName": "ADEEL ART",
     "deliveryCharges": 350,
     "payment": {
-      "jazzCashName": "Adeel Rajpoot",
+      "jazzCashName": "Daniyal Asif",
       "jazzCashNumber": "03058716194",
-      "nayaPayName": "Adeel Rajpoot",
+      "nayaPayName": "Daniyal Asif",
       "nayaPayNumber": "03187803469",
       "codEnabled": true,
       "onlineEnabled": true
     },
     "about": {
-      "heading": "Sketching stories with detail, emotion, and artistry.",
+      "heading": "My Name Is ADEEL ASIF.Sketching stories with detail, emotion, and artistry.",
       "paragraphs": [
         "Welcome to ADEEL ART, where details, memories, and human expression are transformed into hand-drawn artwork. Every stroke is crafted to capture the essence of the subject and the feeling behind the moment.",
         "I create sketches for portraits, special gifts, homes, and custom commissions. My process blends realism, light shading, and personal storytelling to produce artwork that feels meaningful and premium."
