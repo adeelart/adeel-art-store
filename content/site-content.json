@@ -11,6 +11,12 @@
   "settings": {
     "storeName": "ADEEL ART",
     "deliveryCharges": 350,
+    "priceRanges": [
+      { "id": "under-4000", "label": "Under PKR 4,000", "min": 0, "max": 4000 },
+      { "id": "4000-8000", "label": "PKR 4,000–8,000", "min": 4000, "max": 8000 },
+      { "id": "8000-15000", "label": "PKR 8,000–15,000", "min": 8000, "max": 15000 },
+      { "id": "above-15000", "label": "Above PKR 15,000", "min": 15000, "max": null }
+    ],
     "payment": {
       "jazzCashName": "Daniyal Asif",
       "jazzCashNumber": "03058716194",

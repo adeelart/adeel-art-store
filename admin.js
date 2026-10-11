@@ -5,6 +5,12 @@ const loginError = document.getElementById('loginError');
 const dashboardMount = document.getElementById('dashboardMount');
 const toastElement = document.getElementById('adminToast');
 const ORDER_STATES = ['Order Received', 'Confirmed', 'Processing', 'Preparing', 'Shipped', 'Delivered', 'Cancelled'];
+const DEFAULT_PRICE_RANGES = [
+  { id: 'under-4000', label: 'Under PKR 4,000', min: 0, max: 4000 },
+  { id: '4000-8000', label: 'PKR 4,000–8,000', min: 4000, max: 8000 },
+  { id: '8000-15000', label: 'PKR 8,000–15,000', min: 8000, max: 15000 },
+  { id: 'above-15000', label: 'Above PKR 15,000', min: 15000, max: null }
+];
 const state = { content: null, published: null, orders: [], section: 'Dashboard', editingId: null, saving: false };
 
 const clone = (value) => JSON.parse(JSON.stringify(value));
@@ -44,7 +50,7 @@ function dashboardShell() {
         <div class="sidebar-brand"><img src="adeel-art-logo.svg" alt="ADEEL ART" /></div>
         <div class="sidebar-label">Workspace</div>
         <nav class="nav-list" id="adminNav">
-          ${['Dashboard','Products','Add Product','Stock Management','Orders','Payment Settings','Website Settings','About Artist','FAQ','Security'].map((item, index) => `<button class="nav-item ${item === state.section ? 'active' : ''}" data-section="${item}"><span class="nav-icon">${['▦','▤','＋','◉','▧','¤','⚙','✎','?','⌑'][index]}</span>${item}</button>`).join('')}
+          ${['Dashboard','Products','Add Product','Stock Management','Orders','Payment Settings','Website Settings','Price Ranges','About Artist','FAQ','Security'].map((item, index) => `<button class="nav-item ${item === state.section ? 'active' : ''}" data-section="${item}"><span class="nav-icon">${['▦','▤','＋','◉','▧','¤','⚙','↔','✎','?','⌑'][index]}</span>${item}</button>`).join('')}
         </nav>
         <div class="sidebar-bottom"><button class="button" data-action="preview">Preview Changes</button><button class="button primary" data-action="publish">Publish Changes</button><button class="button" data-action="logout">Logout</button></div>
       </aside>
@@ -124,6 +130,19 @@ function renderWebsiteSettings() {
   return `<div class="page-heading"><div><span class="eyebrow">Store setup</span><h2>Website Settings</h2><p>Manage public category navigation and store identity.</p></div></div><form class="panel panel-pad" id="websiteForm"><div class="form-grid"><div class="field"><label>Store Name</label><input name="storeName" value="${escapeHtml(state.content.settings.storeName)}" required /></div><div class="field full-width"><label>Public Categories / Menus</label><textarea name="categories" required>${escapeHtml(state.content.categories.join('\n'))}</textarea><small>One category per line. Add, rename, or remove the categories shown on the public site.</small></div></div><div class="form-actions"><button class="button primary" type="submit">Save Draft</button></div></form>`;
 }
 
+function renderPriceRanges() {
+  state.content.settings.priceRanges ||= clone(DEFAULT_PRICE_RANGES);
+  const ranges = state.content.settings.priceRanges;
+  return `<div class="page-heading"><div><span class="eyebrow">Shop filters</span><h2>Price Ranges</h2><p>Minimum is included; maximum is excluded. Leave maximum blank for no upper limit.</p></div><button class="button" type="button" data-action="add-price-range">Add Range</button></div>
+    <form class="panel panel-pad" id="priceRangesForm"><div class="product-list">${ranges.map((range, index) => `<div class="form-grid" data-price-range="${index}">
+      <input type="hidden" name="id${index}" value="${escapeHtml(range.id)}" />
+      <div class="field"><label for="rangeLabel${index}">Filter Label</label><input id="rangeLabel${index}" name="label${index}" value="${escapeHtml(range.label)}" required /></div>
+      <div class="field"><label for="rangeMin${index}">Minimum (PKR)</label><input id="rangeMin${index}" name="min${index}" type="number" min="0" step="1" value="${escapeHtml(range.min)}" required /></div>
+      <div class="field"><label for="rangeMax${index}">Maximum (PKR)</label><input id="rangeMax${index}" name="max${index}" type="number" min="0" step="1" value="${escapeHtml(range.max ?? '')}" placeholder="No maximum" /></div>
+      <div class="form-actions"><button class="button danger" type="button" data-action="remove-price-range" data-index="${index}">Remove</button></div>
+    </div>`).join('')}</div><div class="form-actions"><button class="button primary" type="submit">Save Draft</button></div></form>`;
+}
+
 function renderAbout() {
   const about = state.content.settings.about;
   return `<div class="page-heading"><div><span class="eyebrow">Public content</span><h2>About Artist</h2></div></div><form class="panel panel-pad" id="aboutForm"><div class="form-grid"><div class="field full-width"><label>Heading</label><input name="heading" value="${escapeHtml(about.heading)}" required /></div>${about.paragraphs.map((text,index) => `<div class="field full-width"><label>Paragraph ${index + 1}</label><textarea name="paragraph${index}">${escapeHtml(text)}</textarea></div>`).join('')}</div><div class="form-actions"><button class="button primary" type="submit">Save Draft</button></div></form>`;
@@ -153,6 +172,7 @@ function renderSection() {
     'Orders': renderOrders,
     'Payment Settings': renderPaymentSettings,
     'Website Settings': renderWebsiteSettings,
+    'Price Ranges': renderPriceRanges,
     'About Artist': renderAbout,
     'FAQ': renderFaq,
     'Security': renderSecurity
@@ -169,9 +189,9 @@ function renderSection() {
   });
 }
 
-function switchSection(section) {
+function switchSection(section, editingId = null) {
   state.section = section;
-  state.editingId = null;
+  state.editingId = editingId;
   dashboardMount.querySelectorAll('.nav-item').forEach(button => button.classList.toggle('active', button.dataset.section === section));
   renderSection();
   if (location.pathname !== '/admin/dashboard') history.pushState({}, '', '/admin/dashboard');
@@ -325,7 +345,7 @@ async function handleAction(action, target) {
       updateCropWindow(cropWindow);
     }
   }
-  if (action === 'edit-product') { state.editingId = target.dataset.id; switchSection('Add Product'); }
+  if (action === 'edit-product') { switchSection('Add Product', target.dataset.id); }
   if (action === 'stock-toggle') {
     const product = state.content.products.find(item => item.id === target.dataset.id);
     if (product) { product.availability = product.availability === 'Out of Stock' ? 'In Stock' : 'Out of Stock'; markDirty(); renderSection(); }
@@ -366,6 +386,15 @@ async function handleAction(action, target) {
     renderSection();
   }
   if (action === 'add-faq') { state.content.settings.faq.push({ question: '', answer: '' }); markDirty(); renderSection(); }
+  if (action === 'add-price-range') {
+    state.content.settings.priceRanges ||= clone(DEFAULT_PRICE_RANGES);
+    state.content.settings.priceRanges.push({ id: `range-${crypto.randomUUID()}`, label: 'New price range', min: 0, max: null });
+    markDirty(); renderSection();
+  }
+  if (action === 'remove-price-range') {
+    state.content.settings.priceRanges.splice(Number(target.dataset.index), 1);
+    markDirty(); renderSection();
+  }
   if (action === 'delete-faq') {
     const index = Number(target.dataset.index);
     state.content.settings.faq.splice(index, 1); markDirty(); renderSection();
@@ -458,6 +487,43 @@ root.addEventListener('submit', async event => {
       const orphan = state.content.products.find(product => !categories.includes(product.category));
       if (orphan) throw new Error(`Move "${orphan.name}" to a remaining category before removing "${orphan.category}".`);
       state.content.settings.storeName = String(data.get('storeName')).trim(); state.content.categories = categories; markDirty(); notify('Website settings saved as draft.');
+    }
+    if (form.id === 'priceRangesForm') {
+      const data = new FormData(form);
+      const ranges = state.content.settings.priceRanges.map((range, index) => {
+        const label = String(data.get(`label${index}`) || '').trim();
+        const min = Number(data.get(`min${index}`));
+        const maxValue = String(data.get(`max${index}`) ?? '').trim();
+        const max = maxValue === '' ? null : Number(maxValue);
+        if (!label || !Number.isFinite(min) || min < 0 || (max !== null && (!Number.isFinite(max) || max <= min))) {
+          throw new Error('Enter a label, a non-negative minimum, and a maximum greater than the minimum.');
+        }
+        return { id: String(data.get(`id${index}`) || `range-${crypto.randomUUID()}`), label, min, max };
+      });
+      const sortedRanges = ranges.slice().sort((first, second) => first.min - second.min);
+      if (sortedRanges.some((range, index) => index > 0 && (sortedRanges[index - 1].max === null || range.min < sortedRanges[index - 1].max))) {
+        throw new Error('Price ranges cannot overlap.');
+      }
+      if (new Set(ranges.map(range => range.label.toLowerCase())).size !== ranges.length) throw new Error('Each price range label must be unique.');
+      state.content.settings.priceRanges = ranges; markDirty(); notify('Price ranges saved as a draft.');
+    }
+    if (form.id === 'priceRangesForm') {
+      const ranges = (state.content.settings.priceRanges || DEFAULT_PRICE_RANGES).map((range, index) => {
+        const label = String(new FormData(form).get(`label${index}`) || '').trim();
+        const min = Number(new FormData(form).get(`min${index}`));
+        const maxValue = String(new FormData(form).get(`max${index}`) ?? '').trim();
+        const max = maxValue === '' ? null : Number(maxValue);
+        if (!label || !Number.isFinite(min) || min < 0 || (max !== null && (!Number.isFinite(max) || max <= min))) {
+          throw new Error('Enter a label, a non-negative minimum, and a maximum greater than the minimum.');
+        }
+        return { id: String(new FormData(form).get(`id${index}`) || `range-${crypto.randomUUID()}`), label, min, max };
+      });
+      const sortedRanges = ranges.slice().sort((first, second) => first.min - second.min);
+      if (sortedRanges.some((range, index) => index > 0 && (sortedRanges[index - 1].max === null || range.min < sortedRanges[index - 1].max))) {
+        throw new Error('Price ranges cannot overlap.');
+      }
+      if (new Set(ranges.map(range => range.label.toLowerCase())).size !== ranges.length) throw new Error('Each price range label must be unique.');
+      state.content.settings.priceRanges = ranges; markDirty(); notify('Price ranges saved as a draft.');
     }
     if (form.id === 'aboutForm') {
       const data = new FormData(form); state.content.settings.about.heading = String(data.get('heading')).trim();

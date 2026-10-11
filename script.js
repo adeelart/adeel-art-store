@@ -30,6 +30,13 @@ const CONFIG = {
   customSketchMessage: 'Hi, I want to order a custom sketch. Please share details about the artwork, reference photos, and pricing.'
 };
 
+const DEFAULT_PRICE_RANGES = [
+  { id: 'under-4000', label: 'Under PKR 4,000', min: 0, max: 4000 },
+  { id: '4000-8000', label: 'PKR 4,000–8,000', min: 4000, max: 8000 },
+  { id: '8000-15000', label: 'PKR 8,000–15,000', min: 8000, max: 15000 },
+  { id: 'above-15000', label: 'Above PKR 15,000', min: 15000, max: null }
+];
+
 const basicSketches = [
   {
     id: 'basic-1',
@@ -195,6 +202,7 @@ const highEndSketches = [
 let allProducts = [...basicSketches, ...mediumSketches, ...highEndSketches];
 let siteContent = null;
 let shopCategories = ['Basic Sketches', 'Medium Sketches', 'High-End / Professional Sketches', 'Custom Sketch'];
+let shopPriceRanges = DEFAULT_PRICE_RANGES;
 
 const state = {
   cart: JSON.parse(localStorage.getItem('sketchStoreCart') || '[]'),
@@ -308,6 +316,7 @@ async function loadSiteContent() {
   }
   shopCategories = siteContent.categories || shopCategories;
   const settings = siteContent.settings || {};
+  shopPriceRanges = Array.isArray(settings.priceRanges) ? settings.priceRanges : DEFAULT_PRICE_RANGES;
   const payment = settings.payment || {};
   Object.assign(CONFIG, {
     storeName: settings.storeName || CONFIG.storeName,
@@ -341,6 +350,12 @@ function renderManagedCategories() {
       .filter((category) => !category.toLowerCase().includes('custom'))
       .map((category) => `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`).join('');
     elements.categoryFilter.value = shopCategories.includes(previous) ? previous : 'all';
+  }
+  if (elements.priceFilter) {
+    const previous = elements.priceFilter.value;
+    elements.priceFilter.innerHTML = '<option value="all">All Prices</option>' + shopPriceRanges
+      .map((range) => `<option value="${escapeHtml(range.id)}">${escapeHtml(range.label)}</option>`).join('');
+    elements.priceFilter.value = shopPriceRanges.some((range) => range.id === previous) ? previous : 'all';
   }
 }
 
@@ -583,13 +598,9 @@ function getFilteredProducts() {
 
     let matchesPrice = true;
     if (priceValue !== 'all') {
-      const [min, max] = priceValue.split('-');
+      const range = shopPriceRanges.find((item) => item.id === priceValue);
       const productPrice = product.salePrice;
-      if (priceValue === '15000+') {
-        matchesPrice = productPrice >= 15000;
-      } else if (max) {
-        matchesPrice = productPrice >= Number(min) && productPrice <= Number(max);
-      }
+      matchesPrice = Boolean(range) && productPrice >= Number(range.min) && (range.max === null || range.max === undefined || productPrice < Number(range.max));
     }
 
     return matchesSearch && matchesCategory && matchesPrice;
