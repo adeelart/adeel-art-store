@@ -1,21 +1,60 @@
 {
-  "version": "2026-10-08T11:41:17.741Z",
-  "publishedAt": "2026-10-08T11:41:17.741Z",
+  "version": "2026-10-11T10:01:23.345Z",
+  "publishedAt": "2026-10-11T10:01:23.345Z",
   "categories": [
     "Basic Sketches",
     "Medium Sketches",
     "High-End / Professional Sketches",
     "Family Or Single Person Sketchs",
+    "Couple Sketches",
     "Custom Sketch"
   ],
   "settings": {
     "storeName": "ADEEL ART",
     "deliveryCharges": 350,
     "priceRanges": [
-      { "id": "under-4000", "label": "Under PKR 4,000", "min": 0, "max": 4000 },
-      { "id": "4000-8000", "label": "PKR 4,000–8,000", "min": 4000, "max": 8000 },
-      { "id": "8000-15000", "label": "PKR 8,000–15,000", "min": 8000, "max": 15000 },
-      { "id": "above-15000", "label": "Above PKR 15,000", "min": 15000, "max": null }
+      {
+        "id": "under-4000",
+        "label": "Under PKR 1000",
+        "min": 0,
+        "max": 1000
+      },
+      {
+        "id": "4000-8000",
+        "label": "PKR 1,000–2,000",
+        "min": 1000,
+        "max": 2000
+      },
+      {
+        "id": "8000-15000",
+        "label": "PKR 2,000–3,000",
+        "min": 2000,
+        "max": 3000
+      },
+      {
+        "id": "above-15000",
+        "label": "PKR 3,000-4,000",
+        "min": 3000,
+        "max": 4000
+      },
+      {
+        "id": "range-77c67c0d-7210-49be-9b08-06d1dfec57d4",
+        "label": "PKR 4,000-5,500",
+        "min": 4000,
+        "max": 5499
+      },
+      {
+        "id": "range-1b9dc79c-05ac-45c5-8b5b-c0ced5ff573f",
+        "label": "PKR 5,500-7,000",
+        "min": 5500,
+        "max": 6999
+      },
+      {
+        "id": "range-b9129a8b-daf5-45c7-9422-d9a83d5f4daf",
+        "label": "Above PKR 7,000",
+        "min": 7000,
+        "max": null
+      }
     ],
     "payment": {
       "jazzCashName": "Daniyal Asif",
@@ -39,7 +78,7 @@
       },
       {
         "question": "How does Cash on Delivery work?",
-        "answer": "Select Cash on Delivery at checkout. You pay when your order is delivered."
+        "answer": "Select Cash on Delivery at checkout.Pay 20% to conferm your order then You pay remaining 80% payment when your order is delivered."
       },
       {
         "question": "How can I pay online?",
@@ -173,12 +212,12 @@
           "zoom": 1
         }
       ],
-      "originalPrice": 2000,
-      "salePrice": 1000,
+      "originalPrice": 5000,
+      "salePrice": 1200,
       "availability": "In Stock",
       "paymentAvailability": "Both Available",
       "featured": true,
-      "discountLabel": "50% Off"
+      "discountLabel": "76% Off"
     },
     {
       "id": "product-2ec36d1c-6c3c-4f76-beb4-201329543256",
@@ -246,11 +285,11 @@
         }
       ],
       "originalPrice": 2500,
-      "salePrice": 1000,
+      "salePrice": 1300,
       "availability": "In Stock",
       "paymentAvailability": "Both Available",
       "featured": true,
-      "discountLabel": "60% Off"
+      "discountLabel": "48% Off"
     },
     {
       "id": "product-e296e0ab-ccd5-4aad-a3b4-cfe4fdd15bce",
@@ -318,7 +357,7 @@
         }
       ],
       "originalPrice": 2500,
-      "salePrice": 1000,
+      "salePrice": 999,
       "availability": "In Stock",
       "paymentAvailability": "Both Available",
       "featured": true,
@@ -390,11 +429,11 @@
         }
       ],
       "originalPrice": 4000,
-      "salePrice": 2500,
+      "salePrice": 3000,
       "availability": "In Stock",
       "paymentAvailability": "Both Available",
       "featured": true,
-      "discountLabel": "38% Off"
+      "discountLabel": "25% Off"
     },
     {
       "id": "product-3fc7da51-15ce-458e-bcd6-27c98a8ed9b3",
@@ -616,8 +655,8 @@
       "id": "product-1ae24a94-461d-4140-a21e-00754c8a6a17",
       "productId": "ART-447068",
       "name": "Eternal Love – Couple Heart Silhouette Sketch",
-      "category": "Basic Sketches",
-      "productType": "Basic",
+      "category": "Medium Sketches",
+      "productType": "Medium",
       "description": "\"Eternal Love\" captures a quiet, intimate moment between two souls. Hand-drawn with soft graphite blending and elegant line work, this artwork depicts a young couple resting their foreheads together, seamlessly framed within a graceful heart shape. It symbolizes emotional warmth, unity, and everlasting romance.\n\nKey Features:\n\nArt Style: Soft-blended pencil art with elegant silhouette work and fine heart line detailing.\n\nTheme: Romance, love, togetherness, and emotional connection.\n\nPaper Quality: Drawn/Printed on premium acid-free archival paper for smooth shading and long-lasting quality.\n\nBest For: Bedrooms, anniversary gifts, Valentine's Day surprises, or cozy living spaces.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
       "imageUrls": [
         "https://iili.io/nEl7JdN.md.jpg",
@@ -826,8 +865,8 @@
       "id": "product-9476f85c-7431-4892-b36d-c01ac7e810f8",
       "productId": "ART-092772",
       "name": "Any Sketch Of Baby,Child,Men or girl",
-      "category": "High-End / Professional Sketches",
-      "productType": "High-End",
+      "category": "Medium Sketches",
+      "productType": "Medium",
       "description": "\"Soulful Expressions\" celebrates the beauty and depth of individual personality in classic graphite. Whether showcasing the delicate innocent smile of a baby, the playful curious eyes of a child, the graceful features of a young girl, or the strong, detailed character lines of a man, this artwork is masterfully hand-drawn to bring out life-like realism and emotion. Every stroke focuses on rich facial textures, expressive eyes, and natural lighting.\n\nKey Features:\n\nArt Style: Ultra-fine realism with soft graphite tonal blending and crisp line work.\n\nTheme: Human portraits, family, emotional connection, and timeless realism.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free archival paper for long-lasting preservation.\n\nBest For: Living room walls, bedroom decor, personalized anniversary/birthday gifts, or family memorial displays.\n\nAvailable Format: Original Graphite Artwork / High-Resolution Art Print (Framed or Unframed).",
       "imageUrls": [
         "https://iili.io/nElASpe.md.jpg"
@@ -839,12 +878,12 @@
           "zoom": 1
         }
       ],
-      "originalPrice": 10000,
-      "salePrice": 4000,
+      "originalPrice": 6000,
+      "salePrice": 2000,
       "availability": "In Stock",
       "paymentAvailability": "Both Available",
       "featured": false,
-      "discountLabel": "60% Off"
+      "discountLabel": "67% Off"
     },
     {
       "id": "product-ef1166c8-8ece-4661-b14d-fc0e63df03a6",
@@ -906,11 +945,11 @@
         }
       ],
       "originalPrice": 7000,
-      "salePrice": 2650,
+      "salePrice": 3000,
       "availability": "In Stock",
       "paymentAvailability": "Both Available",
       "featured": true,
-      "discountLabel": "62% Off"
+      "discountLabel": "57% Off"
     },
     {
       "id": "product-cb562608-927a-41a4-a3d8-b94fbdceb69a",
@@ -952,8 +991,8 @@
       "id": "product-7680756f-71f6-4ed3-9a99-96a44e38d661",
       "productId": "ART-516245",
       "name": "Lethal Charm – Anime Killing Smile Sketch",
-      "category": "Basic Sketches",
-      "productType": "Basic",
+      "category": "Medium Sketches",
+      "productType": "Medium",
       "description": "\"Lethal Charm\" captures that iconic anime archetype: an anti-hero or villain with an intoxicating, sinister smile that hides unmatched power. Hand-drawn with sharp graphite precision and bold shadow play, this artwork highlights intense, mischievous eyes paired with a sharp, devilish grin. It brings an electric, rebellious energy to any anime wall collection.\n\nKey Features:\n\nArt Style: High-intensity manga line art with sharp jawline accents, expressive eyes, and dark graphite shading.\n\nTheme: Anti-hero, edgy anime aesthetic, villain grin, and raw attitude.\n\nPaper Quality: Crafted on premium heavy-weight, acid-free archival paper to ensure deep blacks and crisp highlights.\n\nBest For: Anime collection walls, gaming rooms, streaming setups, or edgy bedroom decor.\n\nAvailable Format: Original Artwork / High-Resolution Art Print (Framed or Unframed).",
       "imageUrls": [
         "https://iili.io/nElA12I.md.jpg",
